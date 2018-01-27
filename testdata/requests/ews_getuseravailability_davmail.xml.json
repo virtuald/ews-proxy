@@ -1,0 +1,48 @@
+{
+    "__type": "GetUserAvailabilityJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "GetUserAvailabilityRequest:#Exchange",
+        "FreeBusyViewOptions": {
+            "__type": "FreeBusyViewOptions:#Exchange",
+            "MergedFreeBusyIntervalInMinutes": 15,
+            "RequestedView": "MergedOnly",
+            "TimeWindow": {
+                "__type": "Duration:#Exchange",
+                "EndTime": "2017-07-23T05:00:00Z",
+                "StartTime": "2017-07-07T05:00:00Z"
+            }
+        },
+        "MailboxDataArray": [{
+            "__type": "MailboxData:#Exchange",
+            "AttendeeType": "Required",
+            "Email": {
+                "__type": "EmailAddress:#Exchange",
+                "Address": "person@example.com"
+            }
+        }],
+        "TimeZone": {
+            "__type": "SerializableTimeZone:#Exchange",
+            "Bias": 0,
+            "DaylightTime": {
+                "__type": "SerializableTimeZoneTime:#Exchange",
+                "Bias": 0,
+                "DayOfWeek": 0,
+                "DayOrder": 1,
+                "Month": 10,
+                "Time": "02:00:00"
+            },
+            "StandardTime": {
+                "__type": "SerializableTimeZoneTime:#Exchange",
+                "Bias": 0,
+                "DayOfWeek": 0,
+                "DayOrder": 1,
+                "Month": 3,
+                "Time": "02:00:00"
+            }
+        }
+    }
+}

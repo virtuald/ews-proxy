@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetUserAvailabilityResponse>
+   <m:FreeBusyResponseArray>
+    <m:FreeBusyResponse>
+     <m:ResponseMessage ResponseClass="Success">
+      <m:ResponseCode>NoError</m:ResponseCode>
+     </m:ResponseMessage>
+     <m:FreeBusyView>
+      <t:FreeBusyViewType>MergedOnly</t:FreeBusyViewType>
+      <t:MergedFreeBusy>1234567890</t:MergedFreeBusy>
+      <t:WorkingHours>
+       <t:TimeZone>
+        <t:Bias>360</t:Bias>
+        <t:StandardTime>
+         <t:Bias>0</t:Bias>
+         <t:Time>02:00:00</t:Time>
+         <t:DayOrder>1</t:DayOrder>
+         <t:Month>11</t:Month>
+         <t:DayOfWeek>Sunday</t:DayOfWeek>
+        </t:StandardTime>
+        <t:DaylightTime>
+         <t:Bias>-60</t:Bias>
+         <t:Time>02:00:00</t:Time>
+         <t:DayOrder>2</t:DayOrder>
+         <t:Month>3</t:Month>
+         <t:DayOfWeek>Sunday</t:DayOfWeek>
+        </t:DaylightTime>
+       </t:TimeZone>
+       <t:WorkingPeriodArray>
+        <t:WorkingPeriod>
+         <t:DayOfWeek>Monday Tuesday Wednesday Thursday Friday</t:DayOfWeek>
+         <t:StartTimeInMinutes>480</t:StartTimeInMinutes>
+         <t:EndTimeInMinutes>1020</t:EndTimeInMinutes>
+        </t:WorkingPeriod>
+       </t:WorkingPeriodArray>
+      </t:WorkingHours>
+     </m:FreeBusyView>
+    </m:FreeBusyResponse>
+   </m:FreeBusyResponseArray>
+  </m:GetUserAvailabilityResponse>
+ </soap:Body>
+</soap:Envelope>

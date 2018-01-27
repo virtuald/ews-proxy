@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1084" MajorVersion="15" MinorBuildNumber="16" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:UpdateItemResponse>
+   <m:ResponseMessages>
+    <m:UpdateItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Message>
+       <t:ItemId ChangeKey="CCCC==" Id="IIIII=="></t:ItemId>
+      </t:Message>
+     </m:Items>
+     <m:ConflictResults>
+      <t:Count>0</t:Count>
+     </m:ConflictResults>
+    </m:UpdateItemResponseMessage>
+   </m:ResponseMessages>
+  </m:UpdateItemResponse>
+ </soap:Body>
+</soap:Envelope>

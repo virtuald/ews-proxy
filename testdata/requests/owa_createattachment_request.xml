@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2013"/>
+        <t:TimeZoneContext>
+            <t:TimeZoneDefinition Id="Eastern Standard Time"/>
+        </t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:CreateAttachment>
+            <m:ParentItemId Id="PPPP==" ChangeKey="CCCC==" />
+            <m:Attachments>
+                <t:FileAttachment>
+                    <t:Content></t:Content>
+                    <t:IsContactPhoto>false</t:IsContactPhoto>
+                    <t:ContentType>text/plain</t:ContentType>
+                    <t:IsInline>false</t:IsInline>
+                    <t:Name>README-dist.txt</t:Name>
+                    <t:Size>1967</t:Size>
+                </t:FileAttachment>
+            </m:Attachments>
+        </m:CreateAttachment>
+    </soap:Body>
+</soap:Envelope>

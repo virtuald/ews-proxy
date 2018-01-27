@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetFolderResponse>
+   <m:ResponseMessages>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK1==" Id="ID1=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK2==" Id="ID2=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK3==" Id="ID3=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK4==" Id="ID4=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK5==" Id="ID5=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK6==" Id="ID6=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK7==" Id="ID7=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK8==" Id="ID8=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:TasksFolder>
+       <t:FolderId ChangeKey="CK9==" Id="ID9=="></t:FolderId>
+      </t:TasksFolder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+    <m:GetFolderResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Folders>
+      <t:Folder>
+       <t:FolderId ChangeKey="CK10==" Id="ID10=="></t:FolderId>
+      </t:Folder>
+     </m:Folders>
+    </m:GetFolderResponseMessage>
+   </m:ResponseMessages>
+  </m:GetFolderResponse>
+ </soap:Body>
+</soap:Envelope>

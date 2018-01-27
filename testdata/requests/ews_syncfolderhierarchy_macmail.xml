@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2007_SP1"/>
+    </soap:Header>
+    <soap:Body>
+        <m:SyncFolderHierarchy xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+            <m:FolderShape>
+                <t:BaseShape>Default</t:BaseShape>
+                <t:AdditionalProperties>
+                    <t:FieldURI FieldURI="folder:ParentFolderId"/>
+                    <t:ExtendedFieldURI PropertyTag="0x10f4" PropertyType="Boolean"/>
+                </t:AdditionalProperties>
+            </m:FolderShape>
+        </m:SyncFolderHierarchy>
+    </soap:Body>
+</soap:Envelope>

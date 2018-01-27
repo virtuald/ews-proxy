@@ -1,0 +1,23 @@
+{
+    "__type": "MoveItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "MoveItemRequest:#Exchange",
+        "ToFolderId": {
+            "__type": "TargetFolderId:#Exchange",
+            "BaseFolderId": {
+                "__type": "FolderId:#Exchange",
+                "Id": "i1=",
+                "ChangeKey": "c1="
+            }
+        },
+        "ItemIds": [{
+            "__type": "ItemId:#Exchange",
+            "Id": "i2=",
+            "ChangeKey": "c2="
+        }]
+    }
+}

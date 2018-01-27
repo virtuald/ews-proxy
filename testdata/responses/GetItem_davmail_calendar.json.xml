@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetItemResponse>
+   <m:ResponseMessages>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:CalendarItem>
+       <t:MimeContent CharacterSet="UTF-8">thecontent</t:MimeContent>
+       <t:ItemId ChangeKey="ck==" Id="id=="></t:ItemId>
+       <t:ReminderIsSet>false</t:ReminderIsSet>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0x3008" PropertyType="SystemTime"></t:ExtendedFieldURI>
+        <t:Value>2017-06-07T13:30:10Z</t:Value>
+       </t:ExtendedProperty>
+       <t:MyResponseType>Accept</t:MyResponseType>
+       <t:RequiredAttendees>
+        <t:Attendee>
+         <t:Mailbox>
+          <t:Name>ra@example.com</t:Name>
+          <t:EmailAddress>ra@example.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>OneOff</t:MailboxType>
+         </t:Mailbox>
+         <t:ResponseType>Unknown</t:ResponseType>
+        </t:Attendee>
+        <t:Attendee>
+         <t:Mailbox>
+          <t:Name>RA</t:Name>
+          <t:EmailAddress>ra@somethign.something.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>OneOff</t:MailboxType>
+         </t:Mailbox>
+         <t:ResponseType>Unknown</t:ResponseType>
+        </t:Attendee>
+        <t:Attendee>
+         <t:Mailbox>
+          <t:Name>Local Dude</t:Name>
+          <t:EmailAddress>local@loco.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>Mailbox</t:MailboxType>
+         </t:Mailbox>
+         <t:ResponseType>Accept</t:ResponseType>
+         <t:LastResponseTime>0001-01-02T00:00:00Z</t:LastResponseTime>
+        </t:Attendee>
+       </t:RequiredAttendees>
+       <t:OptionalAttendees>
+        <t:Attendee>
+         <t:Mailbox>
+          <t:Name>na@example.com</t:Name>
+          <t:EmailAddress>na@example.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>OneOff</t:MailboxType>
+         </t:Mailbox>
+         <t:ResponseType>Unknown</t:ResponseType>
+        </t:Attendee>
+        <t:Attendee>
+         <t:Mailbox>
+          <t:Name>ma@example.com</t:Name>
+          <t:EmailAddress>ma@example.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>OneOff</t:MailboxType>
+         </t:Mailbox>
+         <t:ResponseType>Unknown</t:ResponseType>
+        </t:Attendee>
+       </t:OptionalAttendees>
+      </t:CalendarItem>
+     </m:Items>
+    </m:GetItemResponseMessage>
+   </m:ResponseMessages>
+  </m:GetItemResponse>
+ </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,68 @@
+{
+    "__type": "GetFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013"
+    },
+    "Body": {
+        "__type": "GetFolderRequest:#Exchange",
+        "FolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "msgfolderroot"
+        }],
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "AdditionalProperties": [{
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x6751",
+                    "PropertyType": "Integer"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x3008",
+                    "PropertyType": "SystemTime"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x3603",
+                    "PropertyType": "Integer"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x3613",
+                    "PropertyType": "String"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x670a",
+                    "PropertyType": "SystemTime"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x6752",
+                    "PropertyType": "Integer"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x10f3",
+                    "PropertyType": "String"
+                },
+                {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "folder:DisplayName"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x3602",
+                    "PropertyType": "Integer"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x360a",
+                    "PropertyType": "Boolean"
+                }
+            ],
+            "BaseShape": "IdOnly"
+        }
+    }
+}

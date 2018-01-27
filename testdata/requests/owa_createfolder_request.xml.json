@@ -1,0 +1,29 @@
+{
+    "__type": "CreateFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "CreateFolderRequest:#Exchange",
+        "ParentFolderId": {
+            "__type": "TargetFolderId:#Exchange",
+            "BaseFolderId": {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "msgfolderroot"
+            }
+        },
+        "Folders": [{
+            "__type": "Folder:#Exchange",
+            "DisplayName": "test",
+            "FolderClass": "IPF.Note"
+        }]
+    }
+}

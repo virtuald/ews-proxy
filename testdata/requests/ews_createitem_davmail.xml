@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header><t:RequestServerVersion Version="Exchange2013_SP1"/></soap:Header>
+    <soap:Body>
+        <m:CreateItem MessageDisposition="SendAndSaveCopy">
+            <m:SavedItemFolderId>
+                <t:DistinguishedFolderId Id="sentitems"/>
+            </m:SavedItemFolderId>
+            <m:Items>
+                <t:Message>
+                    <t:MimeContent>Q29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyBjaGFyc2V0PSJ1cy1hc2NpaSINCk1JTUUtVmVyc2lvbjogMS4wDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiA3Yml0DQpTdWJqZWN0OiBUaGUgY29udGVudHMgb2YgJXMNCkZyb206IGR1c3Rpbi5zcGljdXp6YUByYXl0aGVvbi5jb20NClRvOiBkdXN0aW5AdmlydHVhbHJvYWRzaWRlLmNvbQ0KDQpUaGUgdGV4dCBvZiB0aGUgbWVzc2FnZQ==</t:MimeContent>
+                </t:Message>
+            </m:Items>
+        </m:CreateItem>
+    </soap:Body>
+</soap:Envelope>

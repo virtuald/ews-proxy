@@ -1,0 +1,121 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [{
+                    "__type": "Contact:#Exchange",
+                    "ItemId": {
+                        "ChangeKey": "CK==",
+                        "Id": "ID=="
+                    },
+                    "Body": {
+                        "BodyType": "Text",
+                        "IsTruncated": false,
+                        "Value": ""
+                    },
+                    "HasAttachments": false,
+                    "Culture": "en-US",
+                    "FileAs": "",
+                    "FileAsMapping": "None",
+                    "DisplayName": "Person1",
+                    "CompleteName": {
+                        "FullName": "Person1"
+                    },
+                    "EmailAddresses": [{
+                        "Key": "EmailAddress1",
+                        "Name": "Person1",
+                        "RoutingType": "SMTP",
+                        "MailboxType": "Contact",
+                        "EmailAddress": "person1@example.com"
+                    }],
+                    "ImAddresses": [{
+                        "Key": "ImAddress1",
+                        "ImAddress": "sip:person1@example.com"
+                    }]
+                }]
+            },  {
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [{
+                    "__type": "Contact:#Exchange",
+                    "ItemId": {
+                        "ChangeKey": "CK2==",
+                        "Id": "ID2=="
+                    },
+                    "Body": {
+                        "BodyType": "Text",
+                        "IsTruncated": false,
+                        "Value": ""
+                    },
+                    "HasAttachments": false,
+                    "Culture": "en-US",
+                    "FileAs": "",
+                    "FileAsMapping": "None",
+                    "DisplayName": "person2@example.com",
+                    "CompleteName": {
+                        "FullName": "person2@example.com"
+                    },
+                    "EmailAddresses": [{
+                        "Key": "EmailAddress1",
+                        "Name": "person2@example.com",
+                        "RoutingType": "SMTP",
+                        "MailboxType": "Contact",
+                        "EmailAddress": "person2@example.com"
+                    }]
+                }]
+            }, {
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [{
+                    "__type": "Contact:#Exchange",
+                    "ItemId": {
+                        "ChangeKey": "CK3==",
+                        "Id": "ID3=="
+                    },
+                    "Body": {
+                        "BodyType": "Text",
+                        "IsTruncated": false,
+                        "Value": ""
+                    },
+                    "HasAttachments": false,
+                    "Culture": "en-US",
+                    "FileAs": "NAME, PERSON",
+                    "FileAsMapping": "LastCommaFirst",
+                    "DisplayName": "Person Name",
+                    "GivenName": "Person",
+                    "CompleteName": {
+                        "FirstName": "Person",
+                        "LastName": "Name",
+                        "FullName": "Person Name"
+                    },
+                    "EmailAddresses": [{
+                        "Key": "EmailAddress1",
+                        "Name": "Person NAME",
+                        "RoutingType": "SMTP",
+                        "MailboxType": "Contact",
+                        "EmailAddress": "person.name@example.com"
+                    }],
+                    "ImAddresses": [{
+                        "Key": "ImAddress1",
+                        "ImAddress": "sip:person.name@example.com"
+                    }],
+                    "Surname": "NAME"
+                }]
+            }]
+        }
+    }
+}

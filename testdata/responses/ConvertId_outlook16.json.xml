@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:ConvertIdResponse>
+   <m:ResponseMessages>
+    <m:ConvertIdResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:AlternateId Format="EwsId" Id="ID==" Mailbox="person@example.com"></m:AlternateId>
+    </m:ConvertIdResponseMessage>
+   </m:ResponseMessages>
+  </m:ConvertIdResponse>
+ </soap:Body>
+</soap:Envelope>

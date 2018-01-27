@@ -1,0 +1,40 @@
+{
+    "__type": "FindItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2016",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "FindItemRequest:#Exchange",
+        "ItemShape": {
+            "__type": "ItemResponseShape:#Exchange",
+            "BaseShape": "IdOnly"
+        },
+        "ParentFolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "drafts"
+        }],
+        "Traversal": "Shallow",
+        "Paging": {
+            "__type": "IndexedPageView:#Exchange",
+            "BasePoint": "Beginning",
+            "Offset": 0,
+            "MaxEntriesReturned": 25
+        },
+        "SortOrder": [{
+            "__type": "SortResults:#Exchange",
+            "Order": "Descending",
+            "Path": {
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "DateTimeCreated"
+            }
+        }]
+    }
+}

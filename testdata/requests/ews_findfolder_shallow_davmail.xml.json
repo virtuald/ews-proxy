@@ -1,0 +1,96 @@
+{
+    "__type": "FindFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "FindFolderRequest:#Exchange",
+        "Traversal": "Shallow",
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "BaseShape": "IdOnly",
+            "AdditionalProperties": [{
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x6752",
+                "PropertyType": "Integer"
+            }, {
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "folder:DisplayName"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x6751",
+                "PropertyType": "Integer"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x10f3",
+                "PropertyType": "String"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x3008",
+                "PropertyType": "SystemTime"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x360a",
+                "PropertyType": "Boolean"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x670a",
+                "PropertyType": "SystemTime"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x3603",
+                "PropertyType": "Integer"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x3602",
+                "PropertyType": "Integer"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x3613",
+                "PropertyType": "String"
+            }]
+        },
+        "Paging": {
+            "__type": "IndexedPageView:#Exchange",
+            "MaxEntriesReturned": 500,
+            "Offset": 0,
+            "BasePoint": "Beginning"
+        },
+        "Restriction": {
+            "__type": "RestrictionType:#Exchange",
+            "Item": {
+                "__type": "Or:#Exchange",
+                "Items": [{
+                    "__type": "IsEqualTo:#Exchange",
+                    "Item": {
+                        "__type": "ExtendedPropertyUri:#Exchange",
+                        "PropertyTag": "0x3613",
+                        "PropertyType": "String"
+                    },
+                    "FieldURIOrConstant": {
+                        "__type": "FieldURIOrConstantType:#Exchange",
+                        "Item": {
+                            "__type": "Constant:#Exchange",
+                            "Value": "IPF.Note"
+                        }
+                    }
+                }, {
+                    "__type": "Not:#Exchange",
+                    "Item": {
+                        "__type": "Exists:#Exchange",
+                        "Item": {
+                            "__type": "ExtendedPropertyUri:#Exchange",
+                            "PropertyTag": "0x3613",
+                            "PropertyType": "String"
+                        }
+                    }
+                }]
+            }
+        },
+        "ParentFolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "msgfolderroot"
+        }]
+    }
+}

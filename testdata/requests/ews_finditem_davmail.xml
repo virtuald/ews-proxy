@@ -1,0 +1,24 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2013_SP1"/>
+    </soap:Header>
+    <soap:Body>
+        <m:FindItem Traversal="Shallow">
+            <m:ItemShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+                <t:AdditionalProperties>
+                    <t:ExtendedFieldURI PropertyTag="0xe08" PropertyType="Integer"/>
+                    <t:ExtendedFieldURI PropertyTag="0xff9" PropertyType="Binary"/>
+                    <t:ExtendedFieldURI PropertyTag="0xe23" PropertyType="Integer"/>
+                </t:AdditionalProperties>
+            </m:ItemShape>
+            <m:IndexedPageItemView MaxEntriesReturned="500" Offset="0" BasePoint="Beginning"/>
+            <m:SortOrder>
+                <t:FieldOrder Order="Ascending">
+                    <t:ExtendedFieldURI PropertyTag="0xe23" PropertyType="Integer"/>
+                </t:FieldOrder>
+            </m:SortOrder>
+            <m:ParentFolderIds><t:DistinguishedFolderId Id="inbox"/></m:ParentFolderIds>
+        </m:FindItem>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,40 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header><t:RequestServerVersion Version="Exchange2013_SP1"/></soap:Header>
+    <soap:Body>
+        <m:GetUserAvailabilityRequest>
+            <t:TimeZone>
+                <t:Bias>0</t:Bias>
+                <t:StandardTime>
+                    <t:Bias>0</t:Bias>
+                    <t:Time>02:00:00</t:Time>
+                    <t:DayOrder>1</t:DayOrder>
+                    <t:Month>3</t:Month>
+                    <t:DayOfWeek>Sunday</t:DayOfWeek>
+                </t:StandardTime>
+                <t:DaylightTime>
+                    <t:Bias>0</t:Bias>
+                    <t:Time>02:00:00</t:Time>
+                    <t:DayOrder>1</t:DayOrder>
+                    <t:Month>10</t:Month>
+                    <t:DayOfWeek>Sunday</t:DayOfWeek>
+                </t:DaylightTime>
+            </t:TimeZone>
+            <m:MailboxDataArray>
+                <t:MailboxData>
+                    <t:Email>
+                        <t:Address>person@example.com</t:Address>
+                    </t:Email>
+                    <t:AttendeeType>Required</t:AttendeeType>
+                </t:MailboxData>
+            </m:MailboxDataArray>
+            <t:FreeBusyViewOptions>
+                <t:TimeWindow>
+                    <t:StartTime>2017-07-07T05:00:00Z</t:StartTime>
+                    <t:EndTime>2017-07-23T05:00:00Z</t:EndTime>
+                </t:TimeWindow>
+                <t:MergedFreeBusyIntervalInMinutes>15</t:MergedFreeBusyIntervalInMinutes>
+                <t:RequestedView>MergedOnly</t:RequestedView>
+            </t:FreeBusyViewOptions>
+        </m:GetUserAvailabilityRequest>
+    </soap:Body>
+</soap:Envelope>

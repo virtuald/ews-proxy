@@ -1,0 +1,31 @@
+{
+    "__type": "CreateAttachmentJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "CreateAttachmentRequest:#Exchange",
+        "ParentItemId": {
+            "__type": "ItemId:#Exchange",
+            "Id": "PPPP==",
+            "ChangeKey": "CCCC=="
+        },
+        "Attachments": [{
+            "__type": "FileAttachment:#Exchange",
+            "Content": "",
+            "IsContactPhoto": false,
+            "ContentType": "text/plain",
+            "IsInline": false,
+            "Name": "README-dist.txt",
+            "Size": 1967
+        }]
+    }
+}

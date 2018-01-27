@@ -1,0 +1,47 @@
+{
+  "__type": "FindPeopleJsonRequest:#Exchange",
+  "Header": {
+    "__type": "JsonRequestHeaders:#Exchange",
+    "RequestServerVersion": "Exchange2013",
+    "TimeZoneContext": {
+      "__type": "TimeZoneContext:#Exchange",
+      "TimeZoneDefinition": {
+        "__type": "TimeZoneDefinitionType:#Exchange",
+        "Id": "Central Standard Time"
+      }
+    }
+  },
+  "Body": {
+    "__type": "FindPeopleRequest:#Exchange",
+    "IndexedPageItemView": {
+      "__type": "IndexedPageView:#Exchange",
+      "BasePoint": "Beginning",
+      "Offset": 0,
+      "MaxEntriesReturned": 100
+    },
+    "QueryString": "manley",
+    "PersonaShape": {
+      "__type": "PersonaResponseShape:#Exchange",
+      "BaseShape": "Default",
+      "AdditionalProperties": [{
+        "__type": "PropertyUri:#Exchange",
+        "FieldURI": "PersonaAttributions"
+      }]
+    },
+    "ShouldResolveOneOffEmailAddress": false,
+    "SearchPeopleSuggestionIndex": false,
+    "Context": [{
+      "__type": "ContextProperty:#Exchange",
+      "Key": "AppName",
+      "Value": "OWA"
+    }, {
+      "__type": "ContextProperty:#Exchange",
+      "Key": "AppScenario",
+      "Value": ""
+    }, {
+      "__type": "ContextProperty:#Exchange",
+      "Key": "ClientSessionId",
+      "Value": ""
+    }]
+  }
+}

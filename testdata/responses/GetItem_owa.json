@@ -1,0 +1,106 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_20"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [{
+                    "__type": "Message:#Exchange",
+                    "ItemId": {
+                        "ChangeKey": "CK==",
+                        "Id": "IIII=="
+                    },
+                    "ParentFolderId": {
+                        "Id": "PPPP==",
+                        "ChangeKey": "AQAAAA=="
+                    },
+                    "ItemClass": "IPM.Note",
+                    "Subject": "This is a test message",
+                    "Importance": "Normal",
+                    "Sensitivity": "Normal",
+                    "DateTimeReceived": "2017-06-21T15:13:01-04:00",
+                    "Size": 3620,
+                    "IsSubmitted": false,
+                    "IsDraft": true,
+                    "DateTimeSent": "2017-06-21T15:13:01-04:00",
+                    "DateTimeCreated": "2017-06-21T15:13:01-04:00",
+                    "ResponseObjects": [{
+                        "__type": "ForwardItem:#Exchange"
+                    }],
+                    "DisplayTo": "Test User; test@example.com",
+                    "HasAttachments": false,
+                    "ExtendedProperty": [{
+                        "ExtendedFieldURI": {
+                            "PropertyTag": "0xe1d",
+                            "PropertyType": "String"
+                        },
+                        "Value": "Upcoming vacation date"
+                    }, {
+                        "ExtendedFieldURI": {
+                            "PropertyTag": "0x1016",
+                            "PropertyType": "Integer"
+                        },
+                        "Value": "3"
+                    }, {
+                        "ExtendedFieldURI": {
+                            "PropertyTag": "0x6815",
+                            "PropertyType": "Integer"
+                        },
+                        "Value": "112777"
+                    }],
+                    "LastModifiedTime": "2017-06-21T15:15:39-04:00",
+                    "ConversationId": {
+                        "Id": "CCCCC=="
+                    },
+                    "Flag": {
+                        "FlagStatus": "NotFlagged"
+                    },
+                    "InstanceKey": "AQAAAAAAAQ8BAAAAm+EVDQAAAAA=",
+                    "NormalizedBody": {
+                        "BodyType": "HTML",
+                        "IsTruncated": false,
+                        "Value": "<div class=\"rps_366c\"><style type=\"text\/css\"><!-- .rps_366c p\u000a{ margin-top: 0; margin-bottom: 0; }\u000a --><\/style>\u000d\u000a<div>\u000d\u000a<div dir=\"ltr\">\u000d\u000a<div id=\"x_divtagdefaultwrapper\" dir=\"ltr\" style=\"font-size:12pt; color:#000000; font-family:Calibri,Arial,Helvetica,sans-serif\">\u000d\u000a<p>Hey Test User,<\/p>\u000d\u000a<p><br>\u000d\u000a<\/p>\u000d\u000a<p>Sorry for the short notice on this... <\/p>\u000d\u000a<p><br>\u000d\u000a<\/p>\u000d\u000a<p><\/p>\u000d\u000a<ul style=\"margin-bottom:0px; margin-top:0px\">\u000d\u000a<li>List element<\/li><li>Next element\/Friday (30)<\/li><li>Thursday<\/li><\/ul>\u000d\u000a<div><br>\u000d\u000a<\/div>\u000d\u000a<div>I don't think about email.<\/div>\u000d\u000a<div><br>\u000d\u000a<\/div>\u000d\u000a<div>Me<\/div>\u000d\u000a<p><\/p>\u000d\u000a<\/div>\u000d\u000a<\/div>\u000d\u000a<\/body>\u000d\u000a<\/div>\u000d\u000a"
+                    },
+                    "EntityExtractionResult": {},
+                    "Preview": "This would be a preview",
+                    "BlockStatus": false,
+                    "HasBlockedImages": false,
+                    "ReceivedOrRenewTime": "2017-06-21T15:13:01-04:00",
+                    "Apps": [],
+                    "InferenceClassification": "Focused",
+                    "ToRecipients": [{
+                        "Name": "Test User",
+                        "EmailAddress": "user@example.com",
+                        "RoutingType": "SMTP",
+                        "MailboxType": "OneOff",
+                        "Submitted": false
+                    }, {
+                        "Name": "test@example.com",
+                        "EmailAddress": "test@example.com",
+                        "RoutingType": "SMTP",
+                        "MailboxType": "OneOff",
+                        "Submitted": false
+                    }],
+                    "IsReadReceiptRequested": false,
+                    "IsDeliveryReceiptRequested": false,
+                    "InternetMessageId": "<12345@exchange.server>",
+                    "IsRead": true,
+                    "RecipientCounts": {
+                        "ToRecipientsCount": 2
+                    },
+                    "IsGroupEscalationMessage": false
+                }]
+            }]
+        }
+    }
+}

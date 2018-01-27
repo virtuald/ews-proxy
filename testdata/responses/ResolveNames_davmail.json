@@ -1,0 +1,155 @@
+{
+  "Header": {
+    "ServerVersionInfo": {
+      "MajorVersion": 15,
+      "MinorVersion": 1,
+      "MajorBuildNumber": 1157,
+      "MinorBuildNumber": 12,
+      "Version": "V2017_04_14"
+    }
+  },
+  "Body": {
+    "ResponseMessages": {
+      "Items": [{
+        "__type": "ResolveNamesResponseMessage:#Exchange",
+        "ResponseCode": "NoError",
+        "ResponseClass": "Success",
+        "ResolutionSet": {
+          "IncludesLastItemInRange": true,
+          "TotalItemsInView": 5,
+          "Resolutions": [{
+            "Mailbox": {
+              "Name": "Person 1",
+              "EmailAddress": "person1@example.com",
+              "RoutingType": "SMTP",
+              "MailboxType": "Mailbox"
+            },
+            "Contact": {
+              "Culture": "en-US",
+              "DisplayName": "Person 1",
+              "GivenName": "Person",
+              "Initials": "P",
+              "CompanyName": "Example",
+              "EmailAddresses": [{
+                "Key": "EmailAddress1",
+                "EmailAddress": "smtp:person1@example.com"
+              }, {
+                "Key": "EmailAddress2",
+                "EmailAddress": "SMTP:person.1@example.com"
+              }],
+              "PhysicalAddresses": [{
+                "Key": "Business",
+                "Street": "Example Street",
+                "City": "Tucson",
+                "State": "AZ",
+                "CountryOrRegion": "",
+                "PostalCode": ""
+              }],
+              "PhoneNumbers": [{
+                "Key": "AssistantPhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "BusinessFax",
+                "PhoneNumber": ""
+              }, {
+                "Key": "BusinessPhone",
+                "PhoneNumber": "555-555-0001"
+              }, {
+                "Key": "HomePhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "MobilePhone",
+                "PhoneNumber": "555-555-0002"
+              }, {
+                "Key": "Pager",
+                "PhoneNumber": ""
+              }],
+              "AssistantName": "",
+              "ContactSource": "ActiveDirectory",
+              "Department": "Example Department",
+              "JobTitle": "",
+              "Manager": "Person 1 Manager",
+              "OfficeLocation": "",
+              "Surname": "1",
+              "Alias": "person1",
+              "Notes": "A note",
+              "UserSMIMECertificate": [],
+              "MSExchangeCertificate": [],
+              "DirectoryId": "<GUID=guid>",
+              "ManagerMailbox": {
+                "Mailbox": {
+                  "Name": "Person 1 Manager",
+                  "EmailAddress": "person1.manager@example.com",
+                  "RoutingType": "SMTP",
+                  "MailboxType": "Mailbox"
+                }
+              }
+            }
+          }, {
+            "Mailbox": {
+              "Name": "Person 2",
+              "EmailAddress": "person.2@example.com",
+              "RoutingType": "SMTP",
+              "MailboxType": "Mailbox"
+            },
+            "Contact": {
+              "Culture": "en-US",
+              "DisplayName": "Person 2",
+              "GivenName": "Person",
+              "Initials": "",
+              "CompanyName": "Example",
+              "EmailAddresses": [{
+                "Key": "EmailAddress1",
+                "EmailAddress": "smtp:person.2@example.com"
+              }, {
+                "Key": "EmailAddress2",
+                "EmailAddress": "SMTP:person2@example.com"
+              }, {
+                "Key": "EmailAddress3",
+                "EmailAddress": "sip:person.2@example.com"
+              }],
+              "PhysicalAddresses": [{
+                "Key": "Business",
+                "Street": "",
+                "City": "",
+                "State": "",
+                "CountryOrRegion": "",
+                "PostalCode": ""
+              }],
+              "PhoneNumbers": [{
+                "Key": "AssistantPhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "BusinessFax",
+                "PhoneNumber": ""
+              }, {
+                "Key": "BusinessPhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "HomePhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "MobilePhone",
+                "PhoneNumber": ""
+              }, {
+                "Key": "Pager",
+                "PhoneNumber": ""
+              }],
+              "AssistantName": "",
+              "ContactSource": "ActiveDirectory",
+              "Department": "A Department",
+              "JobTitle": "",
+              "OfficeLocation": "",
+              "Surname": "1",
+              "Alias": "12345",
+              "Notes": "",
+              "UserSMIMECertificate": [],
+              "MSExchangeCertificate": [],
+              "DirectoryId": "<GUID=guid>"
+            }
+          }]
+        }
+      }]
+    }
+  }
+}

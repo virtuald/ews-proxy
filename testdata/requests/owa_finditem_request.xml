@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2016"/>
+        <t:TimeZoneContext>
+            <t:TimeZoneDefinition Id="Eastern Standard Time"/>
+        </t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:FindItem Traversal="Shallow">
+            <m:ItemShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+            </m:ItemShape>
+            <m:ParentFolderIds>
+                <t:DistinguishedFolderId Id="drafts"/>
+            </m:ParentFolderIds>
+            <m:IndexedPageItemView BasePoint="Beginning" Offset="0" MaxEntriesReturned="25"/>
+            <m:SortOrder>
+                <t:FieldOrder Order="Descending">
+                    <t:FieldURI FieldURI="DateTimeCreated"/>
+                </t:FieldOrder>
+            </m:SortOrder>
+        </m:FindItem>
+    </soap:Body>
+</soap:Envelope>

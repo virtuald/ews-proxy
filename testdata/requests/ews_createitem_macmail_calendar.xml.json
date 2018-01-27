@@ -1,0 +1,64 @@
+{
+    "__type": "CreateItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "GMT Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "CreateItemRequest:#Exchange",
+        "Items": [{
+            "__type": "CalendarItem:#Exchange",
+            "ExtendedProperty": [{
+                    "__type": "ExtendedPropertyType:#Exchange",
+                    "ExtendedFieldURI": {
+                        "__type": "ExtendedPropertyUri:#Exchange",
+                        "PropertyTag": "0x10f3",
+                        "PropertyType": "String"
+                    },
+                    "Value": "CUSTOMVALUE"
+                },
+                {
+                    "__type": "ExtendedPropertyType:#Exchange",
+                    "ExtendedFieldURI": {
+                        "__type": "ExtendedPropertyUri:#Exchange",
+                        "DistinguishedPropertySetId": "Appointment",
+                        "PropertyId": 33303,
+                        "PropertyType": "Integer"
+                    },
+                    "Value": "3"
+                },
+                {
+                    "__type": "ExtendedPropertyType:#Exchange",
+                    "ExtendedFieldURI": {
+                        "__type": "ExtendedPropertyUri:#Exchange",
+                        "DistinguishedPropertySetId": "PublicStrings",
+                        "PropertyName": "xmozlastack",
+                        "PropertyType": "String"
+                    },
+                    "Value": "20170630T204946Z"
+                }
+            ],
+            "FreeBusyType": "Busy",
+            "MimeContent": {
+                "__type": "MimeContentType:#Exchange",
+                "Value": "bWltZQ=="
+            }
+        }],
+        "MessageDisposition": "SaveOnly",
+        "SavedItemFolderId": {
+            "__type": "TargetFolderId:#Exchange",
+            "BaseFolderId": {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "calendar"
+            }
+        },
+        "SendMeetingInvitations": "SendToNone"
+    }
+}

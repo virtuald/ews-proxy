@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:SyncFolderItemsResponse>
+   <m:ResponseMessages>
+    <m:SyncFolderItemsResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:SyncState>STATE==</m:SyncState>
+     <m:IncludesLastItemInRange>true</m:IncludesLastItemInRange>
+     <m:Changes></m:Changes>
+    </m:SyncFolderItemsResponseMessage>
+   </m:ResponseMessages>
+  </m:SyncFolderItemsResponse>
+ </soap:Body>
+</soap:Envelope>

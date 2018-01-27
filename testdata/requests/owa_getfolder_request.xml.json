@@ -1,0 +1,32 @@
+{
+    "__type": "GetFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "GetFolderRequest:#Exchange",
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "BaseShape": "IdOnly",
+            "AdditionalProperties": [{
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "UnreadCount"
+            }, {
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "TotalCount"
+            }]
+        },
+        "FolderIds": [{
+            "__type": "FolderId:#Exchange",
+            "Id": "AAAA=="
+        }]
+    }
+}

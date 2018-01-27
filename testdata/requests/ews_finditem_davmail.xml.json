@@ -1,0 +1,50 @@
+{
+    "__type": "FindItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "FindItemRequest:#Exchange",
+        "Paging": {
+            "__type": "IndexedPageView:#Exchange",
+            "BasePoint": "Beginning",
+            "MaxEntriesReturned": 500,
+            "Offset": 0
+        },
+        "ItemShape": {
+            "__type": "ItemResponseShape:#Exchange",
+            "AdditionalProperties": [{
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0xe08",
+                    "PropertyType": "Integer"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0xff9",
+                    "PropertyType": "Binary"
+                },
+                {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0xe23",
+                    "PropertyType": "Integer"
+                }
+            ],
+            "BaseShape": "IdOnly"
+        },
+        "ParentFolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "inbox"
+        }],
+        "SortOrder": [{
+            "__type": "SortResults:#Exchange",
+            "Path": {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0xe23",
+                "PropertyType": "Integer"
+            },
+            "Order": "Ascending"
+        }],
+        "Traversal": "Shallow"
+    }
+}

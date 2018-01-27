@@ -1,0 +1,18 @@
+{
+    "__type": "GetFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013"
+    },
+    "Body": {
+        "__type": "GetFolderRequest:#Exchange",
+        "FolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "root"
+        }],
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "BaseShape": "IdOnly"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2013_SP1"/>
+    </soap:Header>
+    <soap:Body>
+        <m:GetUserConfiguration>
+            <m:UserConfigurationName Name="OWA.UserOptions">
+            <t:DistinguishedFolderId Id="root"/></m:UserConfigurationName>
+            <m:UserConfigurationProperties>All</m:UserConfigurationProperties>
+        </m:GetUserConfiguration>
+    </soap:Body>
+</soap:Envelope>

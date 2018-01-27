@@ -1,0 +1,129 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "FindItemResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "HighlightTerms": null,
+                "RootFolder": {
+                    "IncludesLastItemInRange": true,
+                    "IndexedPagingOffset": 109,
+                    "TotalItemsInView": 109,
+                    "Groups": null,
+                    "Items": [{
+                        "__type": "Message:#Exchange",
+                        "ItemId": {
+                            "ChangeKey": "ck==",
+                            "Id": "id==="
+                        },
+                        "ExtendedProperty": [{
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe07",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "1027"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe08",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "17679"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe23",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "9880"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0x3008",
+                                "PropertyType": "SystemTime"
+                            },
+                            "Value": "2017-06-12T08:00:59Z"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe06",
+                                "PropertyType": "SystemTime"
+                            },
+                            "Value": "2017-06-12T08:00:59Z"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xff9",
+                                "PropertyType": "Binary"
+                            },
+                            "Value": "vvvvv"
+                        }],
+                        "IsRead": true
+                    }, {
+                        "__type": "Message:#Exchange",
+                        "ItemId": {
+                            "ChangeKey": "ck2===",
+                            "Id": "id2==="
+                        },
+                        "ExtendedProperty": [{
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe07",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "1027"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe08",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "19754"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe23",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "9930"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0x3008",
+                                "PropertyType": "SystemTime"
+                            },
+                            "Value": "2017-06-13T16:11:52Z"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xe06",
+                                "PropertyType": "SystemTime"
+                            },
+                            "Value": "2017-06-06T14:22:22Z"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "DistinguishedPropertySetId": "PublicStrings",
+                                "PropertyName": "Keywords",
+                                "PropertyType": "StringArray"
+                            },
+                            "Values": ["NonJunk"]
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0x1090",
+                                "PropertyType": "Integer"
+                            },
+                            "Value": "0"
+                        }, {
+                            "ExtendedFieldURI": {
+                                "PropertyTag": "0xff9",
+                                "PropertyType": "Binary"
+                            },
+                            "Value": "xxxx==="
+                        }],
+                        "IsRead": true
+                    }]
+                }
+            }]
+        }
+    }
+}

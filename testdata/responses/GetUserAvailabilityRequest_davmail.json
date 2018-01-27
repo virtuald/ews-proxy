@@ -1,0 +1,49 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "FreeBusyResponseArray": [{
+            "FreeBusyView": {
+                "CalendarEventArray": null,
+                "FreeBusyViewType": "MergedOnly",
+                "MergedFreeBusy": "1234567890",
+                "WorkingHours": {
+                    "TimeZone": {
+                        "Bias": 360,
+                        "DaylightTime": {
+                            "Bias": -60,
+                            "DayOfWeek": 0,
+                            "DayOrder": 2,
+                            "Month": 3,
+                            "Time": "02:00:00"
+                        },
+                        "StandardTime": {
+                            "Bias": 0,
+                            "DayOfWeek": 0,
+                            "DayOrder": 1,
+                            "Month": 11,
+                            "Time": "02:00:00"
+                        }
+                    },
+                    "WorkingPeriodArray": [{
+                        "DayOfWeek": 62,
+                        "EndTimeInMinutes": 1020,
+                        "StartTimeInMinutes": 480
+                    }]
+                }
+            },
+            "ResponseMessage": {
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success"
+            }
+        }],
+        "SuggestionsResponse": null
+    }
+}

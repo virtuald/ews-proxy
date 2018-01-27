@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1084" MajorVersion="15" MinorBuildNumber="16" MinorVersion="1" Version="V2017_04_20"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:CreateAttachmentResponse>
+   <m:ResponseMessages>
+    <m:CreateAttachmentResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Attachments>
+      <t:FileAttachment>
+       <t:AttachmentId Id="III=" RootItemChangeKey="RICK=" RootItemId="RII="></t:AttachmentId>
+       <t:LastModifiedTime>2017-06-22T04:39:55</t:LastModifiedTime>
+      </t:FileAttachment>
+     </m:Attachments>
+    </m:CreateAttachmentResponseMessage>
+   </m:ResponseMessages>
+  </m:CreateAttachmentResponse>
+ </soap:Body>
+</soap:Envelope>

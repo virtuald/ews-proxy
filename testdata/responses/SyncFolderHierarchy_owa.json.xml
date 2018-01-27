@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1084" MajorVersion="15" MinorBuildNumber="16" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:SyncFolderHierarchyResponse>
+   <m:ResponseMessages>
+    <m:SyncFolderHierarchyResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:SyncState>SYNC====</m:SyncState>
+     <m:IncludesLastFolderInRange>true</m:IncludesLastFolderInRange>
+     <m:Changes>
+      <t:Create>
+       <t:Folder>
+        <t:FolderId ChangeKey="FK==" Id="FFFF=="></t:FolderId>
+        <t:ParentFolderId ChangeKey="AQAAAA==" Id="PPFF1=="></t:ParentFolderId>
+        <t:DisplayName>Archive</t:DisplayName>
+        <t:TotalCount>1</t:TotalCount>
+        <t:ChildFolderCount>0</t:ChildFolderCount>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0x10f4" PropertyType="Boolean"></t:ExtendedFieldURI>
+         <t:Value>false</t:Value>
+        </t:ExtendedProperty>
+        <t:UnreadCount>0</t:UnreadCount>
+       </t:Folder>
+      </t:Create>
+      <t:Create>
+       <t:CalendarFolder>
+        <t:FolderId ChangeKey="FCK2==" Id="CF=="></t:FolderId>
+        <t:ParentFolderId ChangeKey="CK2==" Id="PF2=="></t:ParentFolderId>
+        <t:DisplayName>Calendar</t:DisplayName>
+        <t:TotalCount>23</t:TotalCount>
+        <t:ChildFolderCount>1</t:ChildFolderCount>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0x10f4" PropertyType="Boolean"></t:ExtendedFieldURI>
+         <t:Value>false</t:Value>
+        </t:ExtendedProperty>
+       </t:CalendarFolder>
+      </t:Create>
+     </m:Changes>
+    </m:SyncFolderHierarchyResponseMessage>
+   </m:ResponseMessages>
+  </m:SyncFolderHierarchyResponse>
+ </soap:Body>
+</soap:Envelope>

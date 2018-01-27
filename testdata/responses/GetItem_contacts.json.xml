@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetItemResponse>
+   <m:ResponseMessages>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Contact>
+       <t:ItemId ChangeKey="CK==" Id="ID=="></t:ItemId>
+       <t:Body BodyType="Text" IsTruncated="false"></t:Body>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:Culture>en-US</t:Culture>
+       <t:FileAs></t:FileAs>
+       <t:FileAsMapping>None</t:FileAsMapping>
+       <t:DisplayName>Person1</t:DisplayName>
+       <t:CompleteName>
+        <t:FullName>Person1</t:FullName>
+       </t:CompleteName>
+       <t:EmailAddresses>
+        <t:Entry Key="EmailAddress1" MailboxType="Contact" Name="Person1" RoutingType="SMTP">person1@example.com</t:Entry>
+       </t:EmailAddresses>
+       <t:ImAddresses>
+        <t:Entry Key="ImAddress1">sip:person1@example.com</t:Entry>
+       </t:ImAddresses>
+      </t:Contact>
+     </m:Items>
+    </m:GetItemResponseMessage>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Contact>
+       <t:ItemId ChangeKey="CK2==" Id="ID2=="></t:ItemId>
+       <t:Body BodyType="Text" IsTruncated="false"></t:Body>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:Culture>en-US</t:Culture>
+       <t:FileAs></t:FileAs>
+       <t:FileAsMapping>None</t:FileAsMapping>
+       <t:DisplayName>person2@example.com</t:DisplayName>
+       <t:CompleteName>
+        <t:FullName>person2@example.com</t:FullName>
+       </t:CompleteName>
+       <t:EmailAddresses>
+        <t:Entry Key="EmailAddress1" MailboxType="Contact" Name="person2@example.com" RoutingType="SMTP">person2@example.com</t:Entry>
+       </t:EmailAddresses>
+      </t:Contact>
+     </m:Items>
+    </m:GetItemResponseMessage>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Contact>
+       <t:ItemId ChangeKey="CK3==" Id="ID3=="></t:ItemId>
+       <t:Body BodyType="Text" IsTruncated="false"></t:Body>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:Culture>en-US</t:Culture>
+       <t:FileAs>NAME, PERSON</t:FileAs>
+       <t:FileAsMapping>LastCommaFirst</t:FileAsMapping>
+       <t:DisplayName>Person Name</t:DisplayName>
+       <t:GivenName>Person</t:GivenName>
+       <t:CompleteName>
+        <t:FirstName>Person</t:FirstName>
+        <t:LastName>Name</t:LastName>
+        <t:FullName>Person Name</t:FullName>
+       </t:CompleteName>
+       <t:EmailAddresses>
+        <t:Entry Key="EmailAddress1" MailboxType="Contact" Name="Person NAME" RoutingType="SMTP">person.name@example.com</t:Entry>
+       </t:EmailAddresses>
+       <t:ImAddresses>
+        <t:Entry Key="ImAddress1">sip:person.name@example.com</t:Entry>
+       </t:ImAddresses>
+       <t:Surname>NAME</t:Surname>
+      </t:Contact>
+     </m:Items>
+    </m:GetItemResponseMessage>
+   </m:ResponseMessages>
+  </m:GetItemResponse>
+ </soap:Body>
+</soap:Envelope>

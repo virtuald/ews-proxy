@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1084" MajorVersion="15" MinorBuildNumber="16" MinorVersion="1" Version="V2017_04_20"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetItemResponse>
+   <m:ResponseMessages>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Message>
+       <t:ItemId ChangeKey="CK==" Id="IIII=="></t:ItemId>
+       <t:ParentFolderId ChangeKey="AQAAAA==" Id="PPPP=="></t:ParentFolderId>
+       <t:ItemClass>IPM.Note</t:ItemClass>
+       <t:Subject>This is a test message</t:Subject>
+       <t:Sensitivity>Normal</t:Sensitivity>
+       <t:DateTimeReceived>2017-06-21T15:13:01-04:00</t:DateTimeReceived>
+       <t:Size>3620</t:Size>
+       <t:Importance>Normal</t:Importance>
+       <t:IsSubmitted>false</t:IsSubmitted>
+       <t:IsDraft>true</t:IsDraft>
+       <t:DateTimeSent>2017-06-21T15:13:01-04:00</t:DateTimeSent>
+       <t:DateTimeCreated>2017-06-21T15:13:01-04:00</t:DateTimeCreated>
+       <t:ResponseObjects>
+        <t:ForwardItem></t:ForwardItem>
+       </t:ResponseObjects>
+       <t:DisplayTo>Test User; test@example.com</t:DisplayTo>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0xe1d" PropertyType="String"></t:ExtendedFieldURI>
+        <t:Value>Upcoming vacation date</t:Value>
+       </t:ExtendedProperty>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0x1016" PropertyType="Integer"></t:ExtendedFieldURI>
+        <t:Value>3</t:Value>
+       </t:ExtendedProperty>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0x6815" PropertyType="Integer"></t:ExtendedFieldURI>
+        <t:Value>112777</t:Value>
+       </t:ExtendedProperty>
+       <t:LastModifiedTime>2017-06-21T15:15:39-04:00</t:LastModifiedTime>
+       <t:ConversationId Id="CCCCC=="></t:ConversationId>
+       <t:Flag>
+        <t:FlagStatus>NotFlagged</t:FlagStatus>
+       </t:Flag>
+       <t:InstanceKey>AQAAAAAAAQ8BAAAAm+EVDQAAAAA=</t:InstanceKey>
+       <t:NormalizedBody BodyType="HTML" IsTruncated="false">&lt;div class=&#34;rps_366c&#34;&gt;&lt;style type=&#34;text/css&#34;&gt;&lt;!-- .rps_366c p
+{ margin-top: 0; margin-bottom: 0; }
+ --&gt;&lt;/style&gt;&#xD;
+&lt;div&gt;&#xD;
+&lt;div dir=&#34;ltr&#34;&gt;&#xD;
+&lt;div id=&#34;x_divtagdefaultwrapper&#34; dir=&#34;ltr&#34; style=&#34;font-size:12pt; color:#000000; font-family:Calibri,Arial,Helvetica,sans-serif&#34;&gt;&#xD;
+&lt;p&gt;Hey Test User,&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;br&gt;&#xD;
+&lt;/p&gt;&#xD;
+&lt;p&gt;Sorry for the short notice on this... &lt;/p&gt;&#xD;
+&lt;p&gt;&lt;br&gt;&#xD;
+&lt;/p&gt;&#xD;
+&lt;p&gt;&lt;/p&gt;&#xD;
+&lt;ul style=&#34;margin-bottom:0px; margin-top:0px&#34;&gt;&#xD;
+&lt;li&gt;List element&lt;/li&gt;&lt;li&gt;Next element/Friday (30)&lt;/li&gt;&lt;li&gt;Thursday&lt;/li&gt;&lt;/ul&gt;&#xD;
+&lt;div&gt;&lt;br&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div&gt;I don&#39;t think about email.&lt;/div&gt;&#xD;
+&lt;div&gt;&lt;br&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div&gt;Me&lt;/div&gt;&#xD;
+&lt;p&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/body&gt;&#xD;
+&lt;/div&gt;&#xD;
+</t:NormalizedBody>
+       <t:EntityExtractionResult></t:EntityExtractionResult>
+       <t:Preview>This would be a preview</t:Preview>
+       <t:BlockStatus>false</t:BlockStatus>
+       <t:HasBlockedImages>false</t:HasBlockedImages>
+       <t:InferenceClassification>Focused</t:InferenceClassification>
+       <t:ToRecipients>
+        <t:Mailbox>
+         <t:Name>Test User</t:Name>
+         <t:EmailAddress>user@example.com</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+        <t:Mailbox>
+         <t:Name>test@example.com</t:Name>
+         <t:EmailAddress>test@example.com</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:ToRecipients>
+       <t:IsReadReceiptRequested>false</t:IsReadReceiptRequested>
+       <t:IsDeliveryReceiptRequested>false</t:IsDeliveryReceiptRequested>
+       <t:InternetMessageId>&lt;12345@exchange.server&gt;</t:InternetMessageId>
+       <t:IsRead>true</t:IsRead>
+      </t:Message>
+     </m:Items>
+    </m:GetItemResponseMessage>
+   </m:ResponseMessages>
+  </m:GetItemResponse>
+ </soap:Body>
+</soap:Envelope>

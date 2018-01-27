@@ -1,0 +1,22 @@
+{
+    "__type": "SyncFolderHierarchyJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013"
+    },
+    "Body": {
+        "__type": "SyncFolderHierarchyRequest:#Exchange",
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "AdditionalProperties": [{
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "folder:ParentFolderId"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x10f4",
+                "PropertyType": "Boolean"
+            }],
+            "BaseShape": "Default"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "__type": "GetFolderJsonRequest:#Exchange",
+    "Body": {
+
+        "__type": "GetFolderRequest:#Exchange",
+        "FolderIds": [{
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "msgfolderroot"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "inbox"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "drafts"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "sentitems"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "deleteditems"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "junkemail"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "outbox"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "notes"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "tasks"
+            },
+            {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "journal"
+            }
+        ],
+        "FolderShape": {
+
+            "__type": "FolderResponseShape:#Exchange",
+            "BaseShape": "IdOnly"
+        }
+    },
+    "Header": {
+        "RequestServerVersion": "Exchange2013",
+        "__type": "JsonRequestHeaders:#Exchange"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "__type": "GetUserConfigurationJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "GetUserConfigurationRequest:#Exchange",
+        "UserConfigurationName": {
+            "__type": "UserConfigurationNameType:#Exchange",
+            "Name": "OWA.UserOptions",
+            "BaseFolderId": {
+                "__type": "DistinguishedFolderId:#Exchange",
+                "Id": "root"
+            }
+        },
+        "UserConfigurationProperties": "All"
+    }
+}

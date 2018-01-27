@@ -1,0 +1,25 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header></soap:Header>
+    <soap:Body>
+        <m:GetFolder>
+            <m:FolderShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+                <t:AdditionalProperties>
+                    <t:ExtendedFieldURI PropertyTag="0x6751" PropertyType="Integer"/>
+                    <t:ExtendedFieldURI PropertyTag="0x3008" PropertyType="SystemTime"/>
+                    <t:ExtendedFieldURI PropertyTag="0x3603" PropertyType="Integer"/>
+                    <t:ExtendedFieldURI PropertyTag="0x3613" PropertyType="String"/>
+                    <t:ExtendedFieldURI PropertyTag="0x670a" PropertyType="SystemTime"/>
+                    <t:ExtendedFieldURI PropertyTag="0x6752" PropertyType="Integer"/>
+                    <t:ExtendedFieldURI PropertyTag="0x10f3" PropertyType="String"/>
+                    <t:FieldURI FieldURI="folder:DisplayName"/>
+                    <t:ExtendedFieldURI PropertyTag="0x3602" PropertyType="Integer"/>
+                    <t:ExtendedFieldURI PropertyTag="0x360a" PropertyType="Boolean"/>
+                </t:AdditionalProperties>
+            </m:FolderShape>
+            <m:FolderIds>
+                <t:DistinguishedFolderId Id="msgfolderroot"/>
+            </m:FolderIds>
+        </m:GetFolder>
+    </soap:Body>
+</soap:Envelope>

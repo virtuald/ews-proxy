@@ -1,0 +1,21 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [null]
+            }]
+        }
+    }
+}

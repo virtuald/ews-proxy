@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header></soap:Header>
+    <soap:Body>
+        <m:GetFolder>
+            <m:FolderShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+            </m:FolderShape>
+            <m:FolderIds>
+                <t:DistinguishedFolderId Id="root"/>
+            </m:FolderIds>
+        </m:GetFolder>
+    </soap:Body>
+</soap:Envelope>

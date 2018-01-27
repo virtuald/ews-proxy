@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2007_SP1"/>
+    </soap:Header>
+    <soap:Body>
+        <m:GetFolder xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+            <m:FolderShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+            </m:FolderShape>
+            <m:FolderIds>
+                <t:DistinguishedFolderId Id="msgfolderroot"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="inbox"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="drafts"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="sentitems"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="deleteditems"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="junkemail"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="outbox"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="notes"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="tasks"></t:DistinguishedFolderId>
+                <t:DistinguishedFolderId Id="journal"></t:DistinguishedFolderId>
+            </m:FolderIds>
+        </m:GetFolder>
+    </soap:Body>
+</soap:Envelope>

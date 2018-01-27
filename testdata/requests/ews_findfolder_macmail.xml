@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2007_SP1"/>
+    </soap:Header>
+    <soap:Body>
+        <m:FindFolder Traversal="Deep" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+            <m:FolderShape>
+                <t:BaseShape>Default</t:BaseShape>
+                <t:AdditionalProperties>
+                    <t:FieldURI FieldURI="folder:ParentFolderId"/>
+                    <t:ExtendedFieldURI PropertyTag="0x3004" PropertyType="String"/>
+                    <t:ExtendedFieldURI PropertyName="FolderColor" PropertySetId="A7B529B5-4B75-47A7-A24F-20743D6C55CD" PropertyType="String"/>
+                    <t:ExtendedFieldURI PropertyName="FolderOrder" PropertySetId="A7B529B5-4B75-47A7-A24F-20743D6C55CD" PropertyType="Integer"/>
+                </t:AdditionalProperties>
+            </m:FolderShape>
+            <m:Restriction>
+                <t:Or>
+                    <t:Contains ContainmentMode="FullString" ContainmentComparison="Exact">
+                        <t:FieldURI FieldURI="folder:FolderClass"/>
+                        <t:Constant Value="IPF.Appointment"/>
+                    </t:Contains>
+                    <t:Contains ContainmentMode="Prefixed" ContainmentComparison="Exact">
+                        <t:FieldURI FieldURI="folder:FolderClass"/>
+                        <t:Constant Value="IPF.Appointment."/>
+                    </t:Contains>
+                    <t:Contains ContainmentMode="FullString" ContainmentComparison="Exact">
+                        <t:FieldURI FieldURI="folder:FolderClass"/>
+                        <t:Constant Value="IPF.Task"/>
+                    </t:Contains>
+                    <t:Contains ContainmentMode="Prefixed" ContainmentComparison="Exact">
+                        <t:FieldURI FieldURI="folder:FolderClass"/>
+                        <t:Constant Value="IPF.Task."/>
+                    </t:Contains>
+                </t:Or>
+            </m:Restriction>
+            <m:ParentFolderIds>
+                <t:DistinguishedFolderId Id="msgfolderroot"></t:DistinguishedFolderId>
+            </m:ParentFolderIds>
+        </m:FindFolder>
+    </soap:Body>
+</soap:Envelope>

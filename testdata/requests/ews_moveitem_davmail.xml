@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header><t:RequestServerVersion Version="Exchange2013_SP1"/></soap:Header>
+    <soap:Body>
+        <m:MoveItem>
+            <m:ToFolderId>
+                <t:FolderId Id="i1=" ChangeKey="c1="/>
+            </m:ToFolderId>
+            <m:ItemIds>
+                <t:ItemId Id="i2=" ChangeKey="c2="/>
+            </m:ItemIds>
+        </m:MoveItem>
+    </soap:Body>
+</soap:Envelope>

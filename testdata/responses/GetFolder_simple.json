@@ -1,0 +1,33 @@
+{
+    "Body": {
+        "ResponseMessages": {
+            "Items": [
+                {
+                    "Folders": [
+                        {
+                            "FolderId": {
+                                "ChangeKey": "AQAAABYAAABMwfD+V351TYAnZWWiXpZgAACENYj8",
+                                "Id": "AQMkADMwNmE3NGRiLWI4MzYtNGQ3ZS1iYWQ3LWMwNmQwMzE2OTZhZgAuAAADu446GWn0P0SysGYLTd/VSQEATMHw/ld+dU2AJ2VlAKJelmAAAAIBDAAAAA=="
+                            },
+                            "TotalCount": 315,
+                            "UnreadCount": 291,
+                            "__type": "Folder:#Exchange"
+                        }
+                    ],
+                    "ResponseClass": "Success",
+                    "ResponseCode": "NoError",
+                    "__type": "FolderInfoResponseMessage:#Exchange"
+                }
+            ]
+        }
+    },
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorBuildNumber": 1084,
+            "MajorVersion": 15,
+            "MinorBuildNumber": 16,
+            "MinorVersion": 1,
+            "Version": "V2017_04_14"
+        }
+    }
+}

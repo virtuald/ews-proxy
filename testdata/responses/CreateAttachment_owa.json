@@ -1,0 +1,30 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_20"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "AttachmentInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Attachments": [{
+                    "__type": "FileAttachment:#Exchange",
+                    "AttachmentId": {
+                        "RootItemChangeKey": "RICK=",
+                        "RootItemId": "RII=",
+                        "Id": "III="
+                    },
+                    "LastModifiedTime": "2017-06-22T04:39:55"
+                }]
+            }]
+        },
+        "SharingInformation": null
+    }
+}

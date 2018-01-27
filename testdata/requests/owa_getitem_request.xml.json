@@ -1,0 +1,29 @@
+{
+    "__type": "GetItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "V2016_06_24",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "GetItemRequest:#Exchange",
+        "ItemShape": {
+            "__type": "ItemResponseShape:#Exchange",
+            "BaseShape": "IdOnly",
+            "FilterHtmlContent": true,
+            "AddBlankTargetToLinks": true,
+            "MaximumBodySize": 2097152
+        },
+        "ItemIds": [{
+            "__type": "ItemId:#Exchange",
+            "Id": "AAAlAF==",
+            "ChangeKey": "CQAAAB"
+        }]
+    }
+}

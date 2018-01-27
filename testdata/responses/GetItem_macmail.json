@@ -1,0 +1,234 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [
+                {
+                    "__type": "ItemInfoResponseMessage:#Exchange",
+                    "ResponseCode": "NoError",
+                    "ResponseClass": "Success",
+                    "Items": [
+                        {
+                            "__type": "Message:#Exchange",
+                            "ItemId": {
+                                "ChangeKey": "CK==",
+                                "Id": "ID=="
+                            },
+                            "ItemClass": "IPM.Note",
+                            "Subject": "Courtesy Reminder: your LDAP and\/or Windows Domain password expires in 4 days!",
+                            "Importance": "Normal",
+                            "DateTimeReceived": "2017-06-15T04:00:08Z",
+                            "Size": 17091,
+                            "IsDraft": false,
+                            "InternetMessageHeaders": [
+                                {
+                                    "HeaderName": "Received",
+                                    "Value": "something"
+                                },
+                                {
+                                    "HeaderName": "Received",
+                                    "Value": "from somewhere"
+                                },
+                                {
+                                    "HeaderName": "Message-ID",
+                                    "Value": "<2017@msg>"
+                                },
+                                {
+                                    "HeaderName": "Date",
+                                    "Value": "Thu, 15 Jun 2017 00:00:04 -0400"
+                                },
+                                {
+                                    "HeaderName": "MIME-Version",
+                                    "Value": "1.0"
+                                },
+                                {
+                                    "HeaderName": "Subject",
+                                    "Value": "Courtesy Reminder: your LDAP and\/or Windows Domain password expires in 4 days!"
+                                },
+                                {
+                                    "HeaderName": "Content-Type",
+                                    "Value": "multipart\/alternative"
+                                },
+                                {
+                                    "HeaderName": "X-Virus-Version",
+                                    "Value": "superantivirus"
+                                },
+                                {
+                                    "HeaderName": "Return-Path",
+                                    "Value": "noreply@wherever"
+                                },
+                                {
+                                    "HeaderName": "X-MS-Exchange-Organization-AuthAs",
+                                    "Value": "Internal"
+                                },
+                                {
+                                    "HeaderName": "X-MS-Exchange-Organization-AuthMechanism",
+                                    "Value": "10"
+                                },
+                                {
+                                    "HeaderName": "X-MS-PublicTrafficType",
+                                    "Value": "Email"
+                                },
+                                {
+                                    "HeaderName": "X-MS-Exchange-Organization-AVStamp-Enterprise",
+                                    "Value": "1.0"
+                                },
+                                {
+                                    "HeaderName": "X-MS-Exchange-Transport-EndToEndLatency",
+                                    "Value": "00:00:02.1618052"
+                                }
+                            ],
+                            "DateTimeSent": "2017-06-15T04:00:04Z",
+                            "HasAttachments": false,
+                            "ExtendedProperty": [
+                                {
+                                    "ExtendedFieldURI": {
+                                        "PropertyTag": "0xe17",
+                                        "PropertyType": "Integer"
+                                    },
+                                    "Value": "0"
+                                }
+                            ],
+                            "Sender": {
+                                "Mailbox": {
+                                    "Name": "someone@somewhere",
+                                    "EmailAddress": "someone@somewhere",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "OneOff"
+                                }
+                            },
+                            "ToRecipients": [
+                                {
+                                    "Name": "Foo Bar",
+                                    "EmailAddress": "foo.bar@example.com",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "Mailbox",
+                                    "SipUri": "sip:foo.bar@example.com",
+                                    "Submitted": false
+                                }
+                            ],
+                            "From": {
+                                "Mailbox": {
+                                    "Name": "someone@somewhere.else",
+                                    "EmailAddress": "someone@somewhere.else",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "OneOff"
+                                }
+                            },
+                            "InternetMessageId": "<2017@2018>",
+                            "IsRead": false
+                        }
+                    ]
+                },
+                {
+                    "__type": "ItemInfoResponseMessage:#Exchange",
+                    "ResponseCode": "NoError",
+                    "ResponseClass": "Success",
+                    "Items": [
+                        {
+                            "__type": "Message:#Exchange",
+                            "ItemId": {
+                                "ChangeKey": "CK==",
+                                "Id": "ID=="
+                            },
+                            "ItemClass": "IPM.Note",
+                            "Subject": "This is an email",
+                            "Importance": "Normal",
+                            "DateTimeReceived": "2017-06-12T18:30:32Z",
+                            "Size": 26091,
+                            "IsDraft": false,
+                            "InternetMessageHeaders": [
+                                {
+                                    "HeaderName": "Received",
+                                    "Value": "from spam server 1"
+                                },
+                                {
+                                    "HeaderName": "Received",
+                                    "Value": "from spam server 2"
+                                },
+                                {
+                                    "HeaderName": "Date",
+                                    "Value": "Mon, 12 Jun 2017 14:28:56 -0400"
+                                },
+                                {
+                                    "HeaderName": "Subject",
+                                    "Value": "This is an email"
+                                },
+                                {
+                                    "HeaderName": "MIME-Version",
+                                    "Value": "1.0"
+                                },
+                                {
+                                    "HeaderName": "Content-Type",
+                                    "Value": "multipart\/alternative"
+                                },
+                                {
+                                    "HeaderName": "X-MS-Exchange-Transport-EndToEndLatency",
+                                    "Value": "00:00:00.6517474"
+                                }
+                            ],
+                            "DateTimeSent": "2017-06-12T18:28:56Z",
+                            "HasAttachments": false,
+                            "ExtendedProperty": [
+                                {
+                                    "ExtendedFieldURI": {
+                                        "PropertyTag": "0xe17",
+                                        "PropertyType": "Integer"
+                                    },
+                                    "Value": "0"
+                                }
+                            ],
+                            "Sender": {
+                                "Mailbox": {
+                                    "Name": "Showcase",
+                                    "EmailAddress": "Foo@woo",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "OneOff"
+                                }
+                            },
+                            "ToRecipients": [
+                                {
+                                    "Name": "Foo Bar",
+                                    "EmailAddress": "foo.bar@example.com",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "Mailbox",
+                                    "SipUri": "sip:foo.bar@example.com",
+                                    "Submitted": false
+                                }
+                            ],
+                            "From": {
+                                "Mailbox": {
+                                    "Name": "Cyber Place",
+                                    "EmailAddress": "cyber@example.com",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "OneOff"
+                                }
+                            },
+                            "InternetMessageId": "<44@45>",
+                            "IsRead": false,
+                            "ReplyTo": [
+                                {
+                                    "Name": "somebody@somewhere",
+                                    "EmailAddress": "somebody@somewhere",
+                                    "RoutingType": "SMTP",
+                                    "MailboxType": "OneOff",
+                                    "Submitted": false,
+                                    "RelevanceScore": 0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
+

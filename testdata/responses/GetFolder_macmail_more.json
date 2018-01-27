@@ -1,0 +1,126 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID1==",
+                        "ChangeKey": "CK1=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID2==",
+                        "ChangeKey": "CK2=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID3==",
+                        "ChangeKey": "CK3=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID4==",
+                        "ChangeKey": "CK4=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID5==",
+                        "ChangeKey": "CK5=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID6==",
+                        "ChangeKey": "CK6=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID7==",
+                        "ChangeKey": "CK7=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID8==",
+                        "ChangeKey": "CK8=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "TasksFolder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID9==",
+                        "ChangeKey": "CK9=="
+                    }
+                }]
+            }, {
+                "__type": "FolderInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Folders": [{
+                    "__type": "Folder:#Exchange",
+                    "FolderId": {
+                        "Id": "ID10==",
+                        "ChangeKey": "CK10=="
+                    }
+                }]
+            }]
+        }
+    }
+}

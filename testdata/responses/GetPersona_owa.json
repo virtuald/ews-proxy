@@ -1,0 +1,90 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseCode": "NoError",
+        "ResponseClass": "Success",
+        "Persona": {
+            "PersonaId": {
+                "Id": "AAUQAPdgw5gnkVVBj+IzhI0TYAg="
+            },
+            "PersonaTypeString": "Room",
+            "CreationTimeString": "0001-01-01T19:00:00-05:00",
+            "DisplayName": "1234 Anywhere VA",
+            "DisplayNameFirstLast": "1234 Anywhere VA",
+            "DisplayNameLastFirst": "1234 Anywhere VA",
+            "FileAs": "",
+            "FileAsId": "None",
+            "EmailAddress": {
+                "Name": "1234 Anywhere VA",
+                "EmailAddress": "1234 Anywhere_va@example.com",
+                "RoutingType": "SMTP",
+                "MailboxType": "Mailbox",
+                "RelevanceScore": 2147483645
+            },
+            "EmailAddresses": [{
+                "Name": "1234 Anywhere VA",
+                "EmailAddress": "1234 Anywhere_va@example.com",
+                "RoutingType": "SMTP",
+                "MailboxType": "Mailbox",
+                "RelevanceScore": 2147483645
+            }],
+            "ImAddress": "sip:1234 Anywhere_va@example.com",
+            "RelevanceScore": 2147483647,
+            "AttributionsArray": [{
+                "Id": "0",
+                "SourceId": {
+                    "Id": "AAUQAPdgw5gnkVVBj+IzhI0TYAg="
+                },
+                "DisplayName": "GAL",
+                "IsWritable": false,
+                "IsQuickContact": false,
+                "IsHidden": false,
+                "FolderId": null,
+                "FolderName": null,
+                "IsGuest": false
+            }],
+            "DisplayNamesArray": [{
+                "Value": "1234 Anywhere VA",
+                "Attributions": ["0"]
+            }],
+            "Emails1Array": [{
+                "Value": {
+                    "Name": "1234 Anywhere_va@example.com",
+                    "EmailAddress": "1234 Anywhere_va@example.com",
+                    "RoutingType": "SMTP",
+                    "MailboxType": "Mailbox",
+                    "RelevanceScore": 0
+                },
+                "Attributions": ["0"]
+            }],
+            "OfficeLocationsArray": [{
+                "Value": "Arlington VA",
+                "Attributions": ["0"]
+            }],
+            "ImAddressesArray": [{
+                "Value": "sip:1234 Anywhere_va@example.com",
+                "Attributions": ["0"]
+            }],
+            "ItemLinkIds": null,
+            "IsBusinessContact": null,
+            "AttributedIsBusinessContact": null,
+            "SourceMailboxGuids": null,
+            "LastContactedDate": null,
+            "MapiEntryId": null,
+            "MapiEmailAddress": null,
+            "MapiAddressType": null,
+            "MapiSearchKey": null,
+            "MapiTransmittableDisplayName": null,
+            "MapiSendRichInfo": false,
+            "ADObjectId": "98c360f7-9127-4155-8fe2-33848d136008"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "__type": "ResolveNamesJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "ResolveNamesRequest:#Exchange",
+        "ReturnFullContactData": true,
+        "SearchScope": "ActiveDirectory",
+        "UnresolvedEntry": "12345",
+        "ContactDataShape": "Default"
+    }
+}

@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header><t:RequestServerVersion Version="Exchange2013_SP1"/></soap:Header>
+    <soap:Body>
+        <m:UpdateItem MessageDisposition="SaveOnly" ConflictResolution="AlwaysOverwrite" SendMeetingInvitationsOrCancellations="SendToNone">
+            <m:ItemChanges>
+                <t:ItemChange>
+                    <t:ItemId Id="AAMkADMwNmE3NGRiLWI4MzYtNGQ3ZS1iYWQ3LWMwNmQwMzE2OTZhZgBGAAAAAAC7jjoZafQ/RLKwZgtN39VJBwBMwfD+V351TYAnZWWiXpZgAAAAAAEJAABMwfD+V351TYAnZWWiXpZgAACb4Rj2AAA=" ChangeKey="CQAAABYAAABMwfD+V351TYAnZWWiXpZgAACb5d7g"/>
+                    <t:Updates>
+                        <t:SetItemField><t:FieldURI FieldURI="message:IsRead"/>
+                            <t:Message>
+                                <t:IsRead>false</t:IsRead>
+                            </t:Message>
+                        </t:SetItemField>
+                    </t:Updates>
+                </t:ItemChange>
+            </m:ItemChanges>
+        </m:UpdateItem>
+    </soap:Body>
+</soap:Envelope>

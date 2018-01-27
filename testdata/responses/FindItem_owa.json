@@ -1,0 +1,28 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "FindItemResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "HighlightTerms": null,
+                "RootFolder": {
+                    "IncludesLastItemInRange": true,
+                    "IndexedPagingOffset": 0,
+                    "TotalItemsInView": 0,
+                    "Groups": null,
+                    "Items": []
+                }
+            }]
+        }
+    }
+}

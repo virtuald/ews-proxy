@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1084" MajorVersion="15" MinorBuildNumber="16" MinorVersion="1" Version="V2017_04_20"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetConversationItemsResponse>
+   <m:ResponseMessages>
+    <m:GetConversationItemsResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Conversation>
+      <t:ConversationId Id="abcdeid"></t:ConversationId>
+      <t:SyncState>AQEAAACEMCEO</t:SyncState>
+      <t:ConversationNodes>
+       <t:ConversationNode>
+        <t:InternetMessageId>&lt;12345@example.com&gt;</t:InternetMessageId>
+        <t:Items>
+         <t:Message>
+          <t:ItemId ChangeKey="122343ch" Id="2323lk23lk23id"></t:ItemId>
+          <t:ParentFolderId ChangeKey="AQAAAA==" Id="slk2320232"></t:ParentFolderId>
+          <t:ItemClass>IPM.Note</t:ItemClass>
+          <t:DateTimeReceived>2017-06-17T09:00:49-04:00</t:DateTimeReceived>
+          <t:Size>30158</t:Size>
+          <t:ExtendedProperty>
+           <t:ExtendedFieldURI PropertyTag="0x6815" PropertyType="Integer"></t:ExtendedFieldURI>
+           <t:Value>112527</t:Value>
+          </t:ExtendedProperty>
+          <t:LastModifiedTime>2017-06-17T09:00:49-04:00</t:LastModifiedTime>
+          <t:ConversationId Id="2323xoc"></t:ConversationId>
+          <t:Flag>
+           <t:FlagStatus>NotFlagged</t:FlagStatus>
+          </t:Flag>
+          <t:InternetMessageId>&lt;sdsds$@example.com&gt;</t:InternetMessageId>
+          <t:IsRead>true</t:IsRead>
+         </t:Message>
+        </t:Items>
+       </t:ConversationNode>
+      </t:ConversationNodes>
+     </m:Conversation>
+    </m:GetConversationItemsResponseMessage>
+   </m:ResponseMessages>
+  </m:GetConversationItemsResponse>
+ </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:GetItemResponse>
+   <m:ResponseMessages>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Message>
+       <t:ItemId ChangeKey="CK==" Id="ID=="></t:ItemId>
+       <t:ItemClass>IPM.Note</t:ItemClass>
+       <t:Subject>Courtesy Reminder: your LDAP and/or Windows Domain password expires in 4 days!</t:Subject>
+       <t:DateTimeReceived>2017-06-15T04:00:08Z</t:DateTimeReceived>
+       <t:Size>17091</t:Size>
+       <t:Importance>Normal</t:Importance>
+       <t:IsDraft>false</t:IsDraft>
+       <t:InternetMessageHeaders>
+        <t:InternetMessageHeader HeaderName="Received">something</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Received">from somewhere</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Message-ID">&lt;2017@msg&gt;</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Date">Thu, 15 Jun 2017 00:00:04 -0400</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="MIME-Version">1.0</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Subject">Courtesy Reminder: your LDAP and/or Windows Domain password expires in 4 days!</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Content-Type">multipart/alternative</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-Virus-Version">superantivirus</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Return-Path">noreply@wherever</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-Exchange-Organization-AuthAs">Internal</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-Exchange-Organization-AuthMechanism">10</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-PublicTrafficType">Email</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-Exchange-Organization-AVStamp-Enterprise">1.0</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-Exchange-Transport-EndToEndLatency">00:00:02.1618052</t:InternetMessageHeader>
+       </t:InternetMessageHeaders>
+       <t:DateTimeSent>2017-06-15T04:00:04Z</t:DateTimeSent>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0xe17" PropertyType="Integer"></t:ExtendedFieldURI>
+        <t:Value>0</t:Value>
+       </t:ExtendedProperty>
+       <t:Sender>
+        <t:Mailbox>
+         <t:Name>someone@somewhere</t:Name>
+         <t:EmailAddress>someone@somewhere</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:Sender>
+       <t:ToRecipients>
+        <t:Mailbox>
+         <t:Name>Foo Bar</t:Name>
+         <t:EmailAddress>foo.bar@example.com</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>Mailbox</t:MailboxType>
+        </t:Mailbox>
+       </t:ToRecipients>
+       <t:From>
+        <t:Mailbox>
+         <t:Name>someone@somewhere.else</t:Name>
+         <t:EmailAddress>someone@somewhere.else</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:From>
+       <t:InternetMessageId>&lt;2017@2018&gt;</t:InternetMessageId>
+       <t:IsRead>false</t:IsRead>
+      </t:Message>
+     </m:Items>
+    </m:GetItemResponseMessage>
+    <m:GetItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:Items>
+      <t:Message>
+       <t:ItemId ChangeKey="CK==" Id="ID=="></t:ItemId>
+       <t:ItemClass>IPM.Note</t:ItemClass>
+       <t:Subject>This is an email</t:Subject>
+       <t:DateTimeReceived>2017-06-12T18:30:32Z</t:DateTimeReceived>
+       <t:Size>26091</t:Size>
+       <t:Importance>Normal</t:Importance>
+       <t:IsDraft>false</t:IsDraft>
+       <t:InternetMessageHeaders>
+        <t:InternetMessageHeader HeaderName="Received">from spam server 1</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Received">from spam server 2</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Date">Mon, 12 Jun 2017 14:28:56 -0400</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Subject">This is an email</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="MIME-Version">1.0</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="Content-Type">multipart/alternative</t:InternetMessageHeader>
+        <t:InternetMessageHeader HeaderName="X-MS-Exchange-Transport-EndToEndLatency">00:00:00.6517474</t:InternetMessageHeader>
+       </t:InternetMessageHeaders>
+       <t:DateTimeSent>2017-06-12T18:28:56Z</t:DateTimeSent>
+       <t:HasAttachments>false</t:HasAttachments>
+       <t:ExtendedProperty>
+        <t:ExtendedFieldURI PropertyTag="0xe17" PropertyType="Integer"></t:ExtendedFieldURI>
+        <t:Value>0</t:Value>
+       </t:ExtendedProperty>
+       <t:Sender>
+        <t:Mailbox>
+         <t:Name>Showcase</t:Name>
+         <t:EmailAddress>Foo@woo</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:Sender>
+       <t:ToRecipients>
+        <t:Mailbox>
+         <t:Name>Foo Bar</t:Name>
+         <t:EmailAddress>foo.bar@example.com</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>Mailbox</t:MailboxType>
+        </t:Mailbox>
+       </t:ToRecipients>
+       <t:From>
+        <t:Mailbox>
+         <t:Name>Cyber Place</t:Name>
+         <t:EmailAddress>cyber@example.com</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:From>
+       <t:InternetMessageId>&lt;44@45&gt;</t:InternetMessageId>
+       <t:IsRead>false</t:IsRead>
+       <t:ReplyTo>
+        <t:Mailbox>
+         <t:Name>somebody@somewhere</t:Name>
+         <t:EmailAddress>somebody@somewhere</t:EmailAddress>
+         <t:RoutingType>SMTP</t:RoutingType>
+         <t:MailboxType>OneOff</t:MailboxType>
+        </t:Mailbox>
+       </t:ReplyTo>
+      </t:Message>
+     </m:Items>
+    </m:GetItemResponseMessage>
+   </m:ResponseMessages>
+  </m:GetItemResponse>
+ </soap:Body>
+</soap:Envelope>

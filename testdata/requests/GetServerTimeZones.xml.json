@@ -1,0 +1,14 @@
+{
+    "__type":"GetServerTimeZonesJsonRequest:#Exchange",
+    "Header":{
+	"__type":"JsonRequestHeaders:#Exchange",
+	"RequestServerVersion":"Exchange2013"
+    },
+    "Body":{
+	"__type":"GetServerTimeZonesRequest:#Exchange",
+	"ReturnFullTimeZoneData":"true",
+	"Ids":[
+	    "Eastern Standard Time"
+	]
+    }
+}

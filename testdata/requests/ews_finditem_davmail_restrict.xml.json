@@ -1,0 +1,61 @@
+{
+  "__type": "FindItemJsonRequest:#Exchange",
+  "Header": {
+    "__type": "JsonRequestHeaders:#Exchange",
+    "RequestServerVersion": "Exchange2013_SP1"
+  },
+  "Body": {
+    "__type": "FindItemRequest:#Exchange",
+    "Traversal": "Shallow",
+    "ItemShape": {
+      "__type": "ItemResponseShape:#Exchange",
+      "BaseShape": "IdOnly",
+      "AdditionalProperties": [{
+        "__type": "ExtendedPropertyUri:#Exchange",
+        "PropertyTag": "0xff9",
+        "PropertyType": "Binary"
+      }, {
+        "__type": "ExtendedPropertyUri:#Exchange",
+        "PropertyTag": "0xe23",
+        "PropertyType": "Integer"
+      }]
+    },
+    "Paging": {
+      "__type": "IndexedPageView:#Exchange",
+      "MaxEntriesReturned": 10,
+      "Offset": 0,
+      "BasePoint": "Beginning"
+    },
+    "Restriction": {
+      "__type": "RestrictionType:#Exchange",
+      "Item": {
+        "__type": "IsLessThan:#Exchange",
+        "Item": {
+          "__type": "ExtendedPropertyUri:#Exchange",
+          "PropertyTag": "0x3008",
+          "PropertyType": "SystemTime"
+        },
+        "FieldURIOrConstant": {
+          "__type": "FieldURIOrConstantType:#Exchange",
+          "Item": {
+            "__type": "Constant:#Exchange",
+            "Value": "2017-05-24T07:15:01Z"
+          }
+        }
+      }
+    },
+    "SortOrder": [{
+      "__type": "SortResults:#Exchange",
+      "Order": "Ascending",
+      "Path": {
+        "__type": "ExtendedPropertyUri:#Exchange",
+        "PropertyTag": "0xe23",
+        "PropertyType": "Integer"
+      }
+    }],
+    "ParentFolderIds": [{
+      "__type": "DistinguishedFolderId:#Exchange",
+      "Id": "inbox"
+    }]
+  }
+}

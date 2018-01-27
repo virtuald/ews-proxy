@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2013"/>
+        <t:TimeZoneContext>
+            <t:TimeZoneDefinition Id="Eastern Standard Time"/>
+        </t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:DeleteItem DeleteType="MoveToDeletedItems" SuppressReadReceipts="true" SendMeetingCancellations="SendToNone" AffectedTaskOccurrences="AllOccurrences">
+            <m:ItemIds>
+                <t:ItemId Id="AS4AUn=="/>
+            </m:ItemIds>
+        </m:DeleteItem>
+    </soap:Body>
+</soap:Envelope>

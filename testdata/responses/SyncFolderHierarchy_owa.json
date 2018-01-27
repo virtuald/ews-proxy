@@ -1,0 +1,74 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "SyncFolderHierarchyResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Changes": {
+                    "Changes": [{
+                        "__type": "SyncFolderHierarchyCreateOrUpdateType:#Exchange",
+                        "ChangeType": "Create",
+                        "Folder": {
+                            "__type": "Folder:#Exchange",
+                            "FolderId": {
+                                "Id": "FFFF==",
+                                "ChangeKey": "FK=="
+                            },
+                            "ParentFolderId": {
+                                "Id": "PPFF1==",
+                                "ChangeKey": "AQAAAA=="
+                            },
+                            "DisplayName": "Archive",
+                            "TotalCount": 1,
+                            "ChildFolderCount": 0,
+                            "ExtendedProperty": [{
+                                "ExtendedFieldURI": {
+                                    "PropertyTag": "0x10f4",
+                                    "PropertyType": "Boolean"
+                                },
+                                "Value": "false"
+                            }],
+                            "UnreadCount": 0
+                        }
+                    }, {
+                        "__type": "SyncFolderHierarchyCreateOrUpdateType:#Exchange",
+                        "ChangeType": "Create",
+                        "Folder": {
+                            "__type": "CalendarFolder:#Exchange",
+                            "FolderId": {
+                                "Id": "CF==",
+                                "ChangeKey": "FCK2=="
+                            },
+                            "ParentFolderId": {
+                                "Id": "PF2==",
+                                "ChangeKey": "CK2=="
+                            },
+                            "DisplayName": "Calendar",
+                            "TotalCount": 23,
+                            "ChildFolderCount": 1,
+                            "ExtendedProperty": [{
+                                "ExtendedFieldURI": {
+                                    "PropertyTag": "0x10f4",
+                                    "PropertyType": "Boolean"
+                                },
+                                "Value": "false"
+                            }]
+                        }
+                    }]
+                },
+                "IncludesLastFolderInRange": true,
+                "SyncState": "SYNC===="
+            }]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "__type": "SyncFolderItemsJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013"
+    },
+    "Body": {
+        "__type": "SyncFolderItemsRequest:#Exchange",
+        "ItemShape": {
+            "__type": "ItemResponseShape:#Exchange",
+            "BaseShape": "IdOnly",
+            "IncludeMimeContent": false
+        },
+        "MaxChangesReturned": 100,
+        "SyncFolderId": {
+            "__type": "TargetFolderId:#Exchange",
+            "BaseFolderId": {
+                "__type": "FolderId:#Exchange",
+                "Id": "ID=="
+            }
+        },
+        "SyncState": "STATE=="
+    }
+}

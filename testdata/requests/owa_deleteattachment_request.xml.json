@@ -1,0 +1,21 @@
+{
+    "__type": "DeleteAttachmentJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "DeleteAttachmentRequest:#Exchange",
+        "AttachmentIds": [{
+            "__type": "AttachmentId:#Exchange",
+            "Id": "AAAA=="
+        }]
+    }
+}

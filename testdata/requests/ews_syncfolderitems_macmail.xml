@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+    <soap:Header><t:RequestServerVersion Version="Exchange2007_SP1"/></soap:Header>
+    <soap:Body>
+        <m:SyncFolderItems xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+            <m:ItemShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+                <t:IncludeMimeContent>false</t:IncludeMimeContent>
+            </m:ItemShape>
+            <m:SyncFolderId>
+                <t:FolderId Id="ID=="/>
+            </m:SyncFolderId>
+            <m:SyncState>STATE==</m:SyncState>
+            <m:MaxChangesReturned>100</m:MaxChangesReturned>
+        </m:SyncFolderItems>
+    </soap:Body>
+</soap:Envelope>

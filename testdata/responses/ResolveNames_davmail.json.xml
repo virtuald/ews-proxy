@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:ResolveNamesResponse>
+   <m:ResponseMessages>
+    <m:ResolveNamesResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:ResolutionSet IncludesLastItemInRange="true" TotalItemsInView="5">
+      <t:Resolution>
+       <t:Mailbox>
+        <t:Name>Person 1</t:Name>
+        <t:EmailAddress>person1@example.com</t:EmailAddress>
+        <t:RoutingType>SMTP</t:RoutingType>
+        <t:MailboxType>Mailbox</t:MailboxType>
+       </t:Mailbox>
+       <t:Contact>
+        <t:Culture>en-US</t:Culture>
+        <t:DisplayName>Person 1</t:DisplayName>
+        <t:GivenName>Person</t:GivenName>
+        <t:Initials>P</t:Initials>
+        <t:CompanyName>Example</t:CompanyName>
+        <t:EmailAddresses>
+         <t:Entry Key="EmailAddress1">smtp:person1@example.com</t:Entry>
+         <t:Entry Key="EmailAddress2">SMTP:person.1@example.com</t:Entry>
+        </t:EmailAddresses>
+        <t:PhysicalAddresses>
+         <t:Entry Key="Business">
+          <t:Street>Example Street</t:Street>
+          <t:City>Tucson</t:City>
+          <t:State>AZ</t:State>
+          <t:CountryOrRegion></t:CountryOrRegion>
+          <t:PostalCode></t:PostalCode>
+         </t:Entry>
+        </t:PhysicalAddresses>
+        <t:PhoneNumbers>
+         <t:Entry Key="AssistantPhone"></t:Entry>
+         <t:Entry Key="BusinessFax"></t:Entry>
+         <t:Entry Key="BusinessPhone">555-555-0001</t:Entry>
+         <t:Entry Key="HomePhone"></t:Entry>
+         <t:Entry Key="MobilePhone">555-555-0002</t:Entry>
+         <t:Entry Key="Pager"></t:Entry>
+        </t:PhoneNumbers>
+        <t:AssistantName></t:AssistantName>
+        <t:ContactSource>ActiveDirectory</t:ContactSource>
+        <t:Department>Example Department</t:Department>
+        <t:JobTitle></t:JobTitle>
+        <t:Manager>Person 1 Manager</t:Manager>
+        <t:OfficeLocation></t:OfficeLocation>
+        <t:Surname>1</t:Surname>
+        <t:Alias>person1</t:Alias>
+        <t:Notes>A note</t:Notes>
+        <t:UserSMIMECertificate></t:UserSMIMECertificate>
+        <t:MSExchangeCertificate></t:MSExchangeCertificate>
+        <t:DirectoryId>&lt;GUID=guid&gt;</t:DirectoryId>
+        <t:ManagerMailbox>
+         <t:Mailbox>
+          <t:Name>Person 1 Manager</t:Name>
+          <t:EmailAddress>person1.manager@example.com</t:EmailAddress>
+          <t:RoutingType>SMTP</t:RoutingType>
+          <t:MailboxType>Mailbox</t:MailboxType>
+         </t:Mailbox>
+        </t:ManagerMailbox>
+       </t:Contact>
+      </t:Resolution>
+      <t:Resolution>
+       <t:Mailbox>
+        <t:Name>Person 2</t:Name>
+        <t:EmailAddress>person.2@example.com</t:EmailAddress>
+        <t:RoutingType>SMTP</t:RoutingType>
+        <t:MailboxType>Mailbox</t:MailboxType>
+       </t:Mailbox>
+       <t:Contact>
+        <t:Culture>en-US</t:Culture>
+        <t:DisplayName>Person 2</t:DisplayName>
+        <t:GivenName>Person</t:GivenName>
+        <t:Initials></t:Initials>
+        <t:CompanyName>Example</t:CompanyName>
+        <t:EmailAddresses>
+         <t:Entry Key="EmailAddress1">smtp:person.2@example.com</t:Entry>
+         <t:Entry Key="EmailAddress2">SMTP:person2@example.com</t:Entry>
+         <t:Entry Key="EmailAddress3">sip:person.2@example.com</t:Entry>
+        </t:EmailAddresses>
+        <t:PhysicalAddresses>
+         <t:Entry Key="Business">
+          <t:Street></t:Street>
+          <t:City></t:City>
+          <t:State></t:State>
+          <t:CountryOrRegion></t:CountryOrRegion>
+          <t:PostalCode></t:PostalCode>
+         </t:Entry>
+        </t:PhysicalAddresses>
+        <t:PhoneNumbers>
+         <t:Entry Key="AssistantPhone"></t:Entry>
+         <t:Entry Key="BusinessFax"></t:Entry>
+         <t:Entry Key="BusinessPhone"></t:Entry>
+         <t:Entry Key="HomePhone"></t:Entry>
+         <t:Entry Key="MobilePhone"></t:Entry>
+         <t:Entry Key="Pager"></t:Entry>
+        </t:PhoneNumbers>
+        <t:AssistantName></t:AssistantName>
+        <t:ContactSource>ActiveDirectory</t:ContactSource>
+        <t:Department>A Department</t:Department>
+        <t:JobTitle></t:JobTitle>
+        <t:OfficeLocation></t:OfficeLocation>
+        <t:Surname>1</t:Surname>
+        <t:Alias>12345</t:Alias>
+        <t:Notes></t:Notes>
+        <t:UserSMIMECertificate></t:UserSMIMECertificate>
+        <t:MSExchangeCertificate></t:MSExchangeCertificate>
+        <t:DirectoryId>&lt;GUID=guid&gt;</t:DirectoryId>
+       </t:Contact>
+      </t:Resolution>
+     </m:ResolutionSet>
+    </m:ResolveNamesResponseMessage>
+   </m:ResponseMessages>
+  </m:ResolveNamesResponse>
+ </soap:Body>
+</soap:Envelope>

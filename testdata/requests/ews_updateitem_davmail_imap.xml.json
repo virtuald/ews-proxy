@@ -1,0 +1,32 @@
+{
+    "__type": "UpdateItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1"
+    },
+    "Body": {
+        "__type": "UpdateItemRequest:#Exchange",
+        "MessageDisposition": "SaveOnly",
+        "ConflictResolution": "AlwaysOverwrite",
+        "SendMeetingInvitationsOrCancellations": "SendToNone",
+        "ItemChanges": [{
+            "__type": "ItemChange:#Exchange",
+            "ItemId": {
+                "__type": "ItemId:#Exchange",
+                "Id": "AAMkADMwNmE3NGRiLWI4MzYtNGQ3ZS1iYWQ3LWMwNmQwMzE2OTZhZgBGAAAAAAC7jjoZafQ/RLKwZgtN39VJBwBMwfD+V351TYAnZWWiXpZgAAAAAAEJAABMwfD+V351TYAnZWWiXpZgAACb4Rj2AAA=",
+                "ChangeKey": "CQAAABYAAABMwfD+V351TYAnZWWiXpZgAACb5d7g"
+            },
+            "Updates": [{
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "message:IsRead"
+                },
+                "Item": {
+                    "__type": "Message:#Exchange",
+                    "IsRead": false
+                }
+            }]
+        }]
+    }
+}

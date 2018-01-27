@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="V2016_06_24"/>
+        <t:TimeZoneContext>
+            <t:TimeZoneDefinition Id="Eastern Standard Time"/>
+        </t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:GetItem>
+            <m:ItemShape>
+                <t:BaseShape>IdOnly</t:BaseShape>
+                <t:FilterHtmlContent>true</t:FilterHtmlContent>
+                <t:AddBlankTargetToLinks>true</t:AddBlankTargetToLinks>
+                <t:MaximumBodySize>2097152</t:MaximumBodySize>
+            </m:ItemShape>
+            <m:ItemIds>
+                <t:ItemId Id="AAAlAF==" ChangeKey="CQAAAB"/>
+            </m:ItemIds>
+        </m:GetItem>
+    </soap:Body>
+</soap:Envelope>

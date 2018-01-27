@@ -1,0 +1,98 @@
+{
+    "__type": "FindFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013"
+    },
+    "Body": {
+        "__type": "FindFolderRequest:#Exchange",
+        "Traversal": "Deep",
+        "FolderShape": {
+            "__type": "FolderResponseShape:#Exchange",
+            "BaseShape": "Default",
+            "AdditionalProperties": [{
+                "__type": "PropertyUri:#Exchange",
+                "FieldURI": "folder:ParentFolderId"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyTag": "0x3004",
+                "PropertyType": "String"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyName": "FolderColor",
+                "PropertySetId": "A7B529B5-4B75-47A7-A24F-20743D6C55CD",
+                "PropertyType": "String"
+            }, {
+                "__type": "ExtendedPropertyUri:#Exchange",
+                "PropertyName": "FolderOrder",
+                "PropertySetId": "A7B529B5-4B75-47A7-A24F-20743D6C55CD",
+                "PropertyType": "Integer"
+            }]
+        },
+        "Paging": {
+            "__type": "IndexedPageView:#Exchange",
+            "MaxEntriesReturned": 2147483647,
+            "Offset": 0,
+            "BasePoint": "Beginning"
+        },
+        "Restriction": {
+            "__type": "RestrictionType:#Exchange",
+            "Item": {
+                "__type": "Or:#Exchange",
+                "Items": [{
+                    "__type": "Contains:#Exchange",
+                    "ContainmentMode": "FullString",
+                    "ContainmentComparison": "Exact",
+                    "Item": {
+                        "__type": "PropertyUri:#Exchange",
+                        "FieldURI": "folder:FolderClass"
+                    },
+                    "Constant": {
+                        "__type": "Constant:#Exchange",
+                        "Value": "IPF.Appointment"
+                    }
+                }, {
+                    "__type": "Contains:#Exchange",
+                    "ContainmentMode": "Prefixed",
+                    "ContainmentComparison": "Exact",
+                    "Item": {
+                        "__type": "PropertyUri:#Exchange",
+                        "FieldURI": "folder:FolderClass"
+                    },
+                    "Constant": {
+                        "__type": "Constant:#Exchange",
+                        "Value": "IPF.Appointment."
+                    }
+                }, {
+                    "__type": "Contains:#Exchange",
+                    "ContainmentMode": "FullString",
+                    "ContainmentComparison": "Exact",
+                    "Item": {
+                        "__type": "PropertyUri:#Exchange",
+                        "FieldURI": "folder:FolderClass"
+                    },
+                    "Constant": {
+                        "__type": "Constant:#Exchange",
+                        "Value": "IPF.Task"
+                    }
+                }, {
+                    "__type": "Contains:#Exchange",
+                    "ContainmentMode": "Prefixed",
+                    "ContainmentComparison": "Exact",
+                    "Item": {
+                        "__type": "PropertyUri:#Exchange",
+                        "FieldURI": "folder:FolderClass"
+                    },
+                    "Constant": {
+                        "__type": "Constant:#Exchange",
+                        "Value": "IPF.Task."
+                    }
+                }]
+            }
+        },
+        "ParentFolderIds": [{
+            "__type": "DistinguishedFolderId:#Exchange",
+            "Id": "msgfolderroot"
+        }]
+    }
+}

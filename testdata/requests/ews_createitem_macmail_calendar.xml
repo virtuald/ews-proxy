@@ -1,0 +1,33 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header>
+        <t:RequestServerVersion Version="Exchange2013_SP1"/>
+        <t:TimeZoneContext>
+            <t:TimeZoneDefinition Id="GMT Standard Time"/>
+        </t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:CreateItem SendMeetingInvitations="SendToNone" MessageDisposition="SaveOnly">
+            <m:SavedItemFolderId>
+                <t:DistinguishedFolderId Id="calendar"/>
+            </m:SavedItemFolderId>
+            <m:Items>
+                <t:CalendarItem>
+                    <t:MimeContent>bWltZQ==</t:MimeContent>
+                    <t:ExtendedProperty>
+                        <t:ExtendedFieldURI PropertyTag="0x10f3" PropertyType="String"/>
+                        <t:Value>CUSTOMVALUE</t:Value>
+                    </t:ExtendedProperty>
+                    <t:ExtendedProperty>
+                        <t:ExtendedFieldURI DistinguishedPropertySetId="Appointment" PropertyId="33303" PropertyType="Integer"/>
+                        <t:Value>3</t:Value>
+                    </t:ExtendedProperty>
+                    <t:ExtendedProperty>
+                        <t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="xmozlastack" PropertyType="String"/>
+                        <t:Value>20170630T204946Z</t:Value>
+                    </t:ExtendedProperty>
+                    <t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus>
+                </t:CalendarItem>
+            </m:Items>
+        </m:CreateItem>
+    </soap:Body>
+</soap:Envelope>

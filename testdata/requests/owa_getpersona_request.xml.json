@@ -1,0 +1,21 @@
+{
+    "__type": "GetPersonaJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "GetPersonaRequest:#Exchange",
+        "PersonaId": {
+            "__type": "ItemId:#Exchange",
+            "Id": "PPPP=="
+        }
+    }
+}

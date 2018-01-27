@@ -1,0 +1,59 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_20"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "GetConversationItemsResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Conversation": {
+                    "ConversationId": {
+                        "Id": "abcdeid"
+                    },
+                    "SyncState": "AQEAAACEMCEO",
+                    "ConversationNodes": [{
+                        "InternetMessageId": "<12345@example.com>",
+                        "Items": [{
+                            "__type": "Message:#Exchange",
+                            "ItemId": {
+                                "ChangeKey": "122343ch",
+                                "Id": "2323lk23lk23id"
+                            },
+                            "ParentFolderId": {
+                                "Id": "slk2320232",
+                                "ChangeKey": "AQAAAA=="
+                            },
+                            "ItemClass": "IPM.Note",
+                            "DateTimeReceived": "2017-06-17T09:00:49-04:00",
+                            "Size": 30158,
+                            "ExtendedProperty": [{
+                                "ExtendedFieldURI": {
+                                    "PropertyTag": "0x6815",
+                                    "PropertyType": "Integer"
+                                },
+                                "Value": "112527"
+                            }],
+                            "LastModifiedTime": "2017-06-17T09:00:49-04:00",
+                            "ConversationId": {
+                                "Id": "2323xoc"
+                            },
+                            "Flag": {
+                                "FlagStatus": "NotFlagged"
+                            },
+                            "InternetMessageId": "<sdsds$@example.com>",
+                            "IsRead": true
+                        }]
+                    }]
+                }
+            }]
+        }
+    }
+}

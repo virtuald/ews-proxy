@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">
+ <soap:Header>
+  <t:ServerVersionInfo MajorBuildNumber="1157" MajorVersion="15" MinorBuildNumber="12" MinorVersion="1" Version="V2017_04_14"></t:ServerVersionInfo>
+ </soap:Header>
+ <soap:Body>
+  <m:FindItemResponse>
+   <m:ResponseMessages>
+    <m:FindItemResponseMessage ResponseClass="Success">
+     <m:ResponseCode>NoError</m:ResponseCode>
+     <m:RootFolder IncludesLastItemInRange="true" IndexedPagingOffset="109" TotalItemsInView="109">
+      <t:Items>
+       <t:Message>
+        <t:ItemId ChangeKey="ck==" Id="id==="></t:ItemId>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe07" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>1027</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe08" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>17679</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe23" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>9880</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0x3008" PropertyType="SystemTime"></t:ExtendedFieldURI>
+         <t:Value>2017-06-12T08:00:59Z</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe06" PropertyType="SystemTime"></t:ExtendedFieldURI>
+         <t:Value>2017-06-12T08:00:59Z</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xff9" PropertyType="Binary"></t:ExtendedFieldURI>
+         <t:Value>vvvvv</t:Value>
+        </t:ExtendedProperty>
+        <t:IsRead>true</t:IsRead>
+       </t:Message>
+       <t:Message>
+        <t:ItemId ChangeKey="ck2===" Id="id2==="></t:ItemId>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe07" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>1027</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe08" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>19754</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe23" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>9930</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0x3008" PropertyType="SystemTime"></t:ExtendedFieldURI>
+         <t:Value>2017-06-13T16:11:52Z</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xe06" PropertyType="SystemTime"></t:ExtendedFieldURI>
+         <t:Value>2017-06-06T14:22:22Z</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="Keywords" PropertyType="StringArray"></t:ExtendedFieldURI>
+         <t:Values>
+          <t:Value>NonJunk</t:Value>
+         </t:Values>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0x1090" PropertyType="Integer"></t:ExtendedFieldURI>
+         <t:Value>0</t:Value>
+        </t:ExtendedProperty>
+        <t:ExtendedProperty>
+         <t:ExtendedFieldURI PropertyTag="0xff9" PropertyType="Binary"></t:ExtendedFieldURI>
+         <t:Value>xxxx===</t:Value>
+        </t:ExtendedProperty>
+        <t:IsRead>true</t:IsRead>
+       </t:Message>
+      </t:Items>
+     </m:RootFolder>
+    </m:FindItemResponseMessage>
+   </m:ResponseMessages>
+  </m:FindItemResponse>
+ </soap:Body>
+</soap:Envelope>

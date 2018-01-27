@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1084,
+            "MinorBuildNumber": 16,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "DeleteAttachmentResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "RootItemId": {
+                    "RootItemChangeKey": "RICK==",
+                    "RootItemId": "RID=="
+                }
+            }]
+        }
+    }
+}

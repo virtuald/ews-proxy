@@ -1,0 +1,22 @@
+{
+    "__type": "DeleteFolderJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Eastern Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "DeleteFolderRequest:#Exchange",
+        "FolderIds": [{
+            "__type": "FolderId:#Exchange",
+            "Id": "AAAA=="
+        }],
+        "DeleteType": "MoveToDeletedItems"
+    }
+}

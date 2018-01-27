@@ -1,0 +1,187 @@
+{
+  "Header": {
+    "ServerVersionInfo": {
+      "MajorVersion": 15,
+      "MinorVersion": 1,
+      "MajorBuildNumber": 1261,
+      "MinorBuildNumber": 24,
+      "Version": "V2017_04_14"
+    }
+  },
+  "Body": {
+    "ResponseMessages": {
+      "Items": [{
+        "__type": "SyncFolderItemsResponseMessage:#Exchange",
+        "ResponseCode": "NoError",
+        "ResponseClass": "Success",
+        "Changes": {
+          "Changes": [{
+            "__type": "SyncFolderItemsCreateType:#Exchange",
+            "ChangeType": "Create",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gS",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACt5qJUAAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gO",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACtWSclAAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gM",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF9qAAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gR",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACKHSaDAAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gK",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAABSTk95AAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gL",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAAA4leFcAAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsUpdateType:#Exchange",
+            "ChangeType": "Update",
+            "Item": {
+              "__type": "Contact:#Exchange",
+              "ItemId": {
+                "ChangeKey": "EQAAABYAAACdapcfDV6iQ62FKCJcjfRPAACt86gN",
+                "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAAAAACC1AAA="
+              }
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAAARNUaWAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACC+j6oAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACKHSZ9AAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACKHSZ\/AAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACKHSaoAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmGF6WAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF9oAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF9wAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF9xAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF9yAAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF93AAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF95AAA="
+            }
+          }, {
+            "__type": "SyncFolderItemsDeleteType:#Exchange",
+            "ChangeType": "Delete",
+            "ItemId": {
+              "ChangeKey": "CQAAAA==",
+              "Id": "AAMkADViZDZkMmQxLTY2YTEtNGI5MC1iN2EzLTEyMzMwZTNlMmIwOABGAAAAAADKIXauCkX4R4LxBFsud0ANBwCdapcfDV6iQ62FKCJcjfRPAAAAAAEjAACdapcfDV6iQ62FKCJcjfRPAACmKF97AAA="
+            }
+          }]
+        },
+        "IncludesLastItemInRange": true,
+        "SyncState": "H4sIAAAAAAAEAGNgYGcAAotqE0tHE2NTA0ddZ3NHC10TR2djXSdnJ2ddNyMnC2cnczdLU1OD2vBgveDKvOTgksSSVOfEvMSiSgYr0nW65eekpBZ5pjBYkq43LLWoODM\/j8GaaK3+QMuKS4JSk1Mzy1JTQjJzU0nwrU9icYlnXnFJYl5yqncqKb71zS9K9SxJzS32zwtOLSpLLSLByXDfhgNxUW5iUTYklrgYGISA0tDwAxkOUskgCJQyAGI9kJpTimXruFx\/uDd9ZInWK3fgZWSYmzVdnjdukfPaVg2lmN4v\/iBVjMpAzMDHwAzicDOoHNu\/v0r+igeDEFCUF4iB1nUxMTD4OgZ4+jr6gRQxuJm6hYGVo4EAIJZD4u9mZGDYiUVdHhCbIfHRnRUEFgVqXvt5hSxeWSGGeyHsu9XqOXwn6\/+rmqv0Yy8bVBa3rjR1OwxZoAeBHlJw2jrNab9y0MVLTrdVApg5dnc4pfEyFgWwCJyafoNZ0NSNcRrj0oAg1YqjmkCsxaIr9YiF2WLqQ8ZgxpgAFh85GXnmID9\/xkinVAfGygCWDAlhduZSZQUnv6YAlnqNo3+Zm37ZOS1jYtwUwNwlq+ZULOhUu4yxw2lOI+OKAKYZYYw\/nZ41MH4JYPrFFsC4LEgibqpE3DQmjfigjNyggiKnkviAgKC1keoqQKwagNeDpkQHCxEeZwF6fCllnmZchuTnhilAH2P6lxnoX5BnM3OdSrgDAhjXBgG9CvQp87NFIQEBDAiPS7IwNAAAXVhAn6wEAAA=",
+        "TotalCount": 0
+      }]
+    }
+  }
+}

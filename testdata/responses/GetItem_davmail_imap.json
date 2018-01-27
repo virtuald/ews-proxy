@@ -1,0 +1,32 @@
+{
+    "Header": {
+        "ServerVersionInfo": {
+            "MajorVersion": 15,
+            "MinorVersion": 1,
+            "MajorBuildNumber": 1157,
+            "MinorBuildNumber": 12,
+            "Version": "V2017_04_14"
+        }
+    },
+    "Body": {
+        "ResponseMessages": {
+            "Items": [{
+                "__type": "ItemInfoResponseMessage:#Exchange",
+                "ResponseCode": "NoError",
+                "ResponseClass": "Success",
+                "Items": [{
+                    "__type": "Message:#Exchange",
+                    "ItemId": {
+                        "ChangeKey": "ck1==",
+                        "Id": "id1=="
+                    },
+                    "MessageResponseType": 1,
+                    "ParentMessageId": {
+                        "ChangeKey": "ck2==",
+                        "Id": "id2=="
+                    }
+                }]
+            }]
+        }
+    }
+}
