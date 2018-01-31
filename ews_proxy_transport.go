@@ -29,6 +29,9 @@ type EwsProxyTransport struct {
 
 	// Remote Exchange server URL
 	TargetServer *url.URL
+	
+	// the host:port that the reverse proxy is listening on
+	SourceServer *url.URL
 
 	// shared transport object for connections
 	Transport *http.Transport
@@ -60,13 +63,14 @@ type EwsProxyTransport struct {
 }
 
 // Creates an EwsProxyTransport object with lots of defaults filled in
-func NewEwsProxyTransport(target *url.URL) *EwsProxyTransport {
+func NewEwsProxyTransport(source *url.URL, target *url.URL) *EwsProxyTransport {
 	cookies, _ := cookiejar.New(nil)
 	dialer := net.Dialer{Timeout: 2 * time.Second}
 	transport := &EwsProxyTransport{
 		Debug:          false,
 		EwsPath:        "/ews/exchange.asmx",
 		OwaServicePath: "/owa/service.svc",
+		SourceServer:   source,
 		TargetServer:   target,
 		Transport: &http.Transport{
 			Dial: dialer.Dial,
@@ -84,20 +88,37 @@ func NewEwsProxyTransport(target *url.URL) *EwsProxyTransport {
 	return transport
 }
 
+
 // reverse proxy function
 func (this *EwsProxyTransport) RoundTrip(request *http.Request) (*http.Response, error) {
 
 	log.Println("EwsProxy:", request.Method, request.URL.Path)
-
+	
 	// special redirect -- tell the user to close the page
 	if request.URL.Path == "/close.html" {
 		response := this.createEmptyResponse(request, closePageHtml)
 		return response, nil
 	}
+	
+	// mangle the request in various ways
+	request.Header.Del("X-Forwarded-For")
+	request.Header.Del("Upgrade-Insecure-Requests")
+	// don't forward any cookies from the client
+	request.Header.Del("Cookie")
+	
+	// Fix various headers that may contain a URL
+	retargetHeader(&request.Header, "Origin", this.TargetServer)
+	retargetHeader(&request.Header, "Referer", this.TargetServer)
+	
+	// optionally mangle the User-Agent header
+	userAgent := this.UserAgent
+	if userAgent != "" {
+		request.Header.Set("User-Agent", userAgent)
+	}
 
 	var response *http.Response
 	var err error = nil
-
+	
 	// set any stored cookies
 	for _, cookie := range this.Cookies.Cookies(this.TargetServer) {
 		request.AddCookie(cookie)
@@ -178,14 +199,6 @@ func (this *EwsProxyTransport) forwardRequest(request *http.Request) (*http.Resp
 	request.URL.Host = this.TargetServer.Host
 	request.URL.Scheme = this.TargetServer.Scheme
 
-	// Don't let Exchange know there's a proxy! ;)
-	request.Header.Del("X-Forwarded-For")
-
-	// optionally mangle the User-Agent header
-	if this.UserAgent != "" {
-		request.Header.Set("User-Agent", this.UserAgent)
-	}
-
 	// try each connection up to 3 times because of potential network issues
 	var err error
 	var response *http.Response
@@ -217,12 +230,7 @@ func (this *EwsProxyTransport) forwardRequest(request *http.Request) (*http.Resp
 
 	} else if response.StatusCode == http.StatusFound {
 		// on a 302, redirect back to this server, not to the proxied server
-		loc := response.Header.Get("Location")
-		if loc != "" {
-			loc = strings.Replace(loc, this.TargetServer.Scheme+"://"+this.TargetServer.Host, "", -1)
-			response.Header.Set("Location", loc)
-		}
-
+		retargetHeader(&response.Header, "Location", this.SourceServer)
 		this.OnRedirect(response)
 	}
 
@@ -488,3 +496,17 @@ func (this *EwsProxyTransport) OwaKeepalive() {
 		}
 	}
 }
+
+// utility function that retargets headers that have a URL in them
+func retargetHeader(header *http.Header, name string, newUrl *url.URL) {
+	origStr := header.Get(name)
+	if origStr != "" {
+		hUrl, _ := url.Parse(origStr)
+		if hUrl != nil {
+			hUrl.Scheme = newUrl.Scheme
+			hUrl.Host = newUrl.Host
+			header.Set(name, hUrl.String())
+		}
+	}
+}
+

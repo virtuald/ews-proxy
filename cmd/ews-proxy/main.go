@@ -40,8 +40,10 @@ func main() {
 		log.Printf("Invalid exchange server URL '%s'", exchangeServer)
 		return
 	}
+	
+	source, _ := url.Parse(fmt.Sprintf("http://localhost:%d", *listenPort))
 
-	transport := ews.NewEwsProxyTransport(target)
+	transport := ews.NewEwsProxyTransport(source, target)
 	transport.Debug = *debug
 	if *noverify {
 		transport.Transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
