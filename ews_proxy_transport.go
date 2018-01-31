@@ -2,7 +2,9 @@ package ews
 
 import (
 	"bytes"
+	"compress/gzip"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"log"
 	"net"
@@ -12,6 +14,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	
+	"github.com/pkg/errors"
 )
 
 // EwsProxyTransport implements a reverse proxy that allows EWS clients to
@@ -268,9 +272,7 @@ func (this *EwsProxyTransport) translateEws(request *http.Request) (*http.Respon
 		var jsonRequestData []byte
 		var err error
 
-		ewsRequestData, err = ioutil.ReadAll(request.Body)
-		request.Body.Close()
-
+		ewsRequestData, err = readBody(&request.Header, request.Body)
 		if err != nil {
 			return nil, err
 		}
@@ -312,8 +314,7 @@ func (this *EwsProxyTransport) translateEws(request *http.Request) (*http.Respon
 
 		// read it into memory so we can output the json for debug purposes
 		var jsonResponseData []byte
-		jsonResponseData, err = ioutil.ReadAll(response.Body)
-		response.Body.Close()
+		jsonResponseData, err = readBody(&response.Header, response.Body)
 		if err != nil {
 			return nil, err
 		}
@@ -444,16 +445,15 @@ func (this *EwsProxyTransport) CheckLogin(canary string) bool {
 		// don't invalidate the canary in a network error
 		return false
 	}
-
-	defer resp.Body.Close()
-
+	
 	if resp.StatusCode != 200 {
+		resp.Body.Close()
 		log.Printf("Exchange server returned %d status, invalidating canary", resp.StatusCode)
 		this.OwaCanary = ""
 		return false
 	}
 
-	bodyBytes, err := ioutil.ReadAll(resp.Body)
+	bodyBytes, err := readBody(&resp.Header, resp.Body)
 	if err != nil {
 		log.Printf("Could not read json response, invalidating canary: %s", err)
 		this.OwaCanary = ""
@@ -508,5 +508,42 @@ func retargetHeader(header *http.Header, name string, newUrl *url.URL) {
 			header.Set(name, hUrl.String())
 		}
 	}
+}
+
+// utility function that reads the bytes from either a request or a response
+// and returns them. Handles gzip compression if present
+func readBody(header *http.Header, body io.ReadCloser) ([]byte, error) {
+
+	var theReader io.ReadCloser
+	var err error
+
+	if header.Get("Content-Encoding") == "gzip" {
+		// we never gzip anything
+		header.Del("Content-Encoding")
+		
+		theReader, err = gzip.NewReader(body)
+		if err != nil {
+			return nil, errors.Wrapf(err, "open gzip reader")
+		}
+
+		defer theReader.Close()
+
+	} else {
+		theReader = body
+	}
+
+	// Get the data (through the set reader)
+	b, err := ioutil.ReadAll(theReader)
+	if err != nil {
+		return nil, errors.Wrapf(err, "reading body")
+	}
+
+	// Close the reader
+	err = body.Close()
+	if err != nil {
+		return nil, errors.Wrapf(err, "closing response reader")
+	}
+
+	return b, nil
 }
 
