@@ -282,8 +282,6 @@ func (this *EwsProxyTransport) translateEws(request *http.Request) (*http.Respon
 
 		jsonRequestData, ewsProxyOp, err = SOAP2JSON(bytes.NewReader(ewsRequestData))
 		if err != nil {
-			log.Println("Ews Translator: Request Error", err)
-
 			this.appendTransaction(transactionLog, "Ews Translator: Request Error: "+err.Error())
 			this.OnEwsTranslationError(transactionLog)
 
@@ -325,8 +323,6 @@ func (this *EwsProxyTransport) translateEws(request *http.Request) (*http.Respon
 		outbuf := new(bytes.Buffer)
 		err = JSON2SOAP(bytes.NewReader(jsonResponseData), ewsProxyOp, outbuf, false)
 		if err != nil {
-			log.Println("Ews Translator: Response Error", err)
-
 			this.appendTransaction(transactionLog, "Ews Translator: Response Error: "+err.Error())
 			this.OnEwsTranslationError(transactionLog)
 
