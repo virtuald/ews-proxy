@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"net"
 	"net/http"
 	"net/http/httputil"
 	"net/url"
@@ -13,6 +14,7 @@ import (
 	"github.com/TV4/graceful"
 	"github.com/pkg/browser"
 	"github.com/virtuald/ews-proxy"
+	"github.com/virtuald/ews-proxy/proxyutils"
 )
 
 func main() {
@@ -43,15 +45,36 @@ func main() {
 	
 	source, _ := url.Parse(fmt.Sprintf("http://localhost:%d", *listenPort))
 
-	transport := ews.NewEwsProxyTransport(source, target)
-	transport.Debug = *debug
+	// construct the HTTP transport
+	dialer := net.Dialer{Timeout: 2 * time.Second}
+
+	transport := &http.Transport{Dial: dialer.Dial}
 	if *noverify {
-		transport.Transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
+		transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	}
 
-	proxy := httputil.NewSingleHostReverseProxy(target)
-	proxy.Transport = transport
-
+	// construct the needed middlewares
+	redirector := proxyutils.NewRedirectorMiddleware(source, target)
+	
+	translator := ews.NewTranslationMiddleware()
+	translator.Debug = *debug
+	
+	
+	login := &ews.LoginMiddleware{
+		Redirector: redirector,
+		Translator: translator,
+		Transport: transport,
+		CheckPath: "/owa/",
+	}
+	
+	// create a chained reverse proxy
+	chain := proxyutils.CreateChainedProxy("EWS Proxy", transport, login, translator, redirector)
+	
+	proxy := &httputil.ReverseProxy{
+		Director: func(*http.Request){},
+		Transport: chain,
+	}
+	
 	// navigate to listening port after the server starts
 	go func() {
 		time.Sleep(1 * time.Second)
