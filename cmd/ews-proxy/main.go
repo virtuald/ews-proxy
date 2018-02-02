@@ -66,6 +66,7 @@ func main() {
 		Transport: transport,
 		CheckPath: "/owa/",
 	}
+	login.CanaryFinder = login.CookieCanaryFinder
 	
 	// create a chained reverse proxy
 	chain := proxyutils.CreateChainedProxy("EWS Proxy", transport, login, translator, redirector)

@@ -25,6 +25,8 @@ type LoginMiddleware struct {
 	// disabled if 0
 	KeepAlivePeriod time.Duration
 	keepAliveTicker *time.Ticker
+	
+	CanaryFinder func(*http.Response) (string, error)
 }
 
 func (this *LoginMiddleware) RequestModifier(request *http.Request, cctx proxyutils.ChainContext) error {
@@ -45,20 +47,20 @@ func (this *LoginMiddleware) RequestModifier(request *http.Request, cctx proxyut
 func (this *LoginMiddleware) ResponseModifier(response *http.Response, cctx proxyutils.ChainContext) error {
 	// Watch for OWA Canary info, and snag it
 	if strings.Contains(cctx["login_ctx"].(string), this.CheckPath) && response.StatusCode != 302 {
-		for _, cookie := range this.Redirector.Cookies.Cookies(this.Redirector.TargetServer) {
-			if cookie.Name == "X-OWA-CANARY" {
-				// if the user agent isn't set, set it since this access is being
-				// done by a user's browser
-				if this.Redirector.UserAgent == "" {
-					this.Redirector.UserAgent = response.Header.Get("User-Agent")
-				}
-
-				// validate and set the canary if it's valid
-				this.CheckLogin(cookie.Value)
-				break
+		canary, err := this.CanaryFinder(response)
+		if err != nil {
+			return err
+		} else if canary != "" {
+			// if the user agent isn't set, set it since this access is being
+			// done by a user's browser
+			if this.Redirector.UserAgent == "" {
+				this.Redirector.UserAgent = response.Header.Get("User-Agent")
 			}
+			
+			// validate and set the canary if it's valid
+			this.CheckLogin(canary)
 		}
-
+		
 		// If we have a canary stored, _always_ tell the user's page to close, otherwise
 		// eventually they'll make it to the OWA page
 		if this.Translator.OwaCanary != "" {
@@ -74,6 +76,16 @@ func (this *LoginMiddleware) ResponseModifier(response *http.Response, cctx prox
 	}
 
 	return nil
+}
+
+func (this *LoginMiddleware) CookieCanaryFinder(response *http.Response) (string, error) {
+	for _, cookie := range this.Redirector.Cookies.Cookies(this.Redirector.TargetServer) {
+		if cookie.Name == "X-OWA-CANARY" {
+			return cookie.Value, nil
+		}
+	}
+	
+	return "", nil
 }
 
 // CheckLogin returns false if login is required, and will
