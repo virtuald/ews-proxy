@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 	"strconv"
 	"time"
 
@@ -59,7 +60,7 @@ type ewsProxyContext struct {
 func (this *TranslationMiddleware) RequestModifier(request *http.Request, cctx proxyutils.ChainContext) error {
 
 	// mangle requests to the EWS path only
-	if request.URL.Path != this.EwsPath {
+	if !strings.EqualFold(request.URL.Path, this.EwsPath) {
 		return nil
 	}
 
