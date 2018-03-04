@@ -35,7 +35,13 @@ func NewRequestError(response *http.Response) error {
 }
 
 type chainedProxy struct {
-	Logmsg string
+	Name string
+	
+	LogTrace *log.Logger
+	LogDebug *log.Logger
+	LogInfo *log.Logger
+	LogWarn *log.Logger
+	LogError *log.Logger
 
 	RequestModifiers  []RequestModifierFunc
 	ResponseModifiers []ResponseModifierFunc
@@ -44,13 +50,25 @@ type chainedProxy struct {
 }
 
 // returns a http.RoundTripper that calls each middleware in order
-func CreateChainedProxy(logmsg string, Transport http.RoundTripper, middlewares ...Middleware) http.RoundTripper {
+func CreateChainedProxy(name string, 
+	logTrace *log.Logger,
+	logDebug *log.Logger,
+	logInfo *log.Logger,
+	logWarn *log.Logger,
+	logError *log.Logger,
+	Transport http.RoundTripper, middlewares ...Middleware) http.RoundTripper {
+		 
 	if Transport == nil {
 		Transport = http.DefaultTransport
 	}
 
 	proxy := &chainedProxy{
-		Logmsg:    logmsg,
+		Name:    name,
+		LogTrace: logTrace,
+		LogDebug: logDebug,
+		LogInfo: logInfo,
+		LogWarn: logWarn,
+		LogError: logError,
 		Transport: Transport,
 	}
 
@@ -69,14 +87,14 @@ func CreateChainedProxy(logmsg string, Transport http.RoundTripper, middlewares 
 // remote server, then passes through all of the response handlers
 func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, error) {
 
-	log.Println(this.Logmsg, request.Method, request.URL.Path)
+	this.LogInfo.Println(this.Name, request.Method, request.URL.Path)
 
 	var response *http.Response
 	var err error
 
 	defer func() {
 		if response != nil {
-			log.Println("response", response.StatusCode)
+			this.LogInfo.Println(this.Name, "response", response.StatusCode)
 		}
 	}()
 
@@ -101,7 +119,7 @@ func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, erro
       // success, stop trying
       break
     } else {
-      log.Println("Network error, retrying: ", err)
+      this.LogWarn.Println(this.Name, "Network error, retrying: ", err)
       // throttle
       time.Sleep(1 * time.Second)
     }
