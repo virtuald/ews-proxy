@@ -10,6 +10,7 @@ import (
 	"net/http/httputil"
 	"net/url"
 	"time"
+	"os"
 
 	"github.com/TV4/graceful"
 	"github.com/pkg/browser"
@@ -69,7 +70,8 @@ func main() {
 	login.CanaryFinder = login.CookieCanaryFinder
 	
 	// create a chained reverse proxy
-	chain := proxyutils.CreateChainedProxy("EWS Proxy", transport, login, translator, redirector)
+	logAll := log.New(os.Stderr, "", log.LstdFlags)
+	chain := proxyutils.CreateChainedProxy("EWS Proxy", logAll, logAll, logAll, logAll, logAll, transport, login, translator, redirector)
 	
 	proxy := &httputil.ReverseProxy{
 		Director: func(*http.Request){},
