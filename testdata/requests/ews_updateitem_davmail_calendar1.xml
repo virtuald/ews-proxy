@@ -1,0 +1,111 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types" xmlns:m="http://schemas.microsoft.com/exchange/services/2006/messages">
+    <soap:Header><t:RequestServerVersion Version="Exchange2013_SP1"/>
+        <t:TimeZoneContext><t:TimeZoneDefinition Id="Central Standard Time"/></t:TimeZoneContext>
+    </soap:Header>
+    <soap:Body>
+        <m:UpdateItem MessageDisposition="SendAndSaveCopy" ConflictResolution="AutoResolve" SendMeetingInvitationsOrCancellations="SendToAllAndSaveCopy">
+            <m:ItemChanges>
+                <t:ItemChange><t:ItemId Id="someitemid=" ChangeKey="thechangekey"/>
+                    <t:Updates>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:Start"/>
+                            <t:CalendarItem>
+                                <t:Start>2018-03-27T08:00:00</t:Start>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:End"/>
+                            <t:CalendarItem>
+                                <t:End>2018-03-27T09:00:00</t:End>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:StartTimeZone"/>
+                            <t:CalendarItem>
+                                <t:StartTimeZone Id="Central Standard Time"></t:StartTimeZone>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:EndTimeZone"/>
+                            <t:CalendarItem>
+                                <t:EndTimeZone Id="Central Standard Time"></t:EndTimeZone>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:LegacyFreeBusyStatus"/>
+                            <t:CalendarItem>
+                                <t:LegacyFreeBusyStatus>Busy</t:LegacyFreeBusyStatus>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:IsAllDayEvent"/>
+                            <t:CalendarItem>
+                                <t:IsAllDayEvent>false</t:IsAllDayEvent>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="item:Sensitivity"/>
+                            <t:Item>
+                                <t:Sensitivity>Normal</t:Sensitivity>
+                            </t:Item>
+                        </t:SetItemField>
+                        <t:SetItemField><t:ExtendedFieldURI PropertyTag="0x1000" PropertyType="String"/>
+                            <t:Item>
+                                <t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x1000" PropertyType="String"/>
+                                    <t:Value>Created inside OWA Updated in Outlook on 4/3
+
+                                    </t:Value>
+                                </t:ExtendedProperty>
+                            </t:Item>
+                        </t:SetItemField>
+                        <t:SetItemField><t:ExtendedFieldURI PropertyTag="0x37" PropertyType="String"/>
+                            <t:Item>
+                                <t:ExtendedProperty><t:ExtendedFieldURI PropertyTag="0x37" PropertyType="String"/>
+                                    <t:Value>Some Meeting</t:Value>
+                                </t:ExtendedProperty>
+                            </t:Item>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:Location"/>
+                            <t:CalendarItem>
+                                <t:Location>Skype</t:Location>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:Recurrence"/>
+                            <t:CalendarItem>
+                                <t:Recurrence>
+                                    <t:WeeklyRecurrence>
+                                        <t:Interval>1</t:Interval>
+                                        <t:DaysOfWeek>Tuesday</t:DaysOfWeek>
+                                    </t:WeeklyRecurrence>
+                                    <t:NoEndRecurrence>
+                                        <t:StartDate>2018-03-27</t:StartDate>
+                                    </t:NoEndRecurrence>
+                                </t:Recurrence>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:RequiredAttendees"/>
+                            <t:CalendarItem>
+                                <t:RequiredAttendees></t:RequiredAttendees>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="calendar:OptionalAttendees"/>
+                            <t:CalendarItem>
+                                <t:OptionalAttendees></t:OptionalAttendees>
+                            </t:CalendarItem>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="item:ReminderIsSet"/>
+                            <t:Item>
+                                <t:ReminderIsSet>true</t:ReminderIsSet>
+                            </t:Item>
+                        </t:SetItemField>
+                        <t:SetItemField><t:FieldURI FieldURI="item:ReminderMinutesBeforeStart"/>
+                            <t:Item>
+                                <t:ReminderMinutesBeforeStart>5</t:ReminderMinutesBeforeStart>
+                            </t:Item>
+                        </t:SetItemField>
+                        <t:SetItemField><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="xmozlastack" PropertyType="String"/>
+                            <t:Item>
+                                <t:ExtendedProperty><t:ExtendedFieldURI DistinguishedPropertySetId="PublicStrings" PropertyName="xmozlastack" PropertyType="String"/>
+                                    <t:Value>20180424T141956Z</t:Value>
+                                </t:ExtendedProperty>
+                            </t:Item>
+                        </t:SetItemField>
+                    </t:Updates>
+                </t:ItemChange>
+            </m:ItemChanges>
+        </m:UpdateItem>
+    </soap:Body>
+</soap:Envelope>

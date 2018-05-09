@@ -332,7 +332,7 @@ def apply_hacks(operations, types, elements):
     
     # TODO we should automatically handle when processing the schema
     types[t + "DaysOfWeekType"].simple_type = "list"
-    types[t + "DaysOfWeekType"].list_item_type = 'DayOfWeekType'        
+    types[t + "DaysOfWeekType"].list_item_type = 'DayOfWeekType'
 
     types[t + "EmailAddressType"].json_extra = [
         'EmailAddressIndex', 'RelevanceScore', 'SipUri', 'Submitted',
@@ -452,7 +452,10 @@ def process_element(e, elements, types, cls_hierarchy):
     ename = e.name
     data = process_type(typ, types, ename, cls_hierarchy)
     if ename in elements:
-        raise Exception("Internal error: duplicate element name")
+        #raise Exception("Internal error: duplicate element name %s" % ename)
+        # TODO: this occurs because of bugs in xmlschema, and upgrading is a pain
+        print("Warning: duplicate element name", ename)
+        return None, None
 
     if data:
         edata = ElementData(data)
@@ -523,7 +526,6 @@ def process_type(typ, types, parent_name, cls_hierarchy):
         if hasattr(typ, 'elem'):
             restriction = typ.elem
             data.enum_values = []
-            index = 0
             for child in restriction.getchildren():
                     ns, tagname = split_qname(child.tag)
                     if tagname == 'enumeration':
@@ -641,7 +643,6 @@ def process_type(typ, types, parent_name, cls_hierarchy):
         outer_json_name = None
         inner_json_name = None
         json_idx = 0
-
         # recurse to any underlying elements
         for el in content_elements:
             if isinstance(el, XsdGroup):
@@ -653,7 +654,12 @@ def process_type(typ, types, parent_name, cls_hierarchy):
                         json_idx += 1
 
                 for iel in el:
-                    _process(iel, inner_json_name)
+                    # TODO: too many special cases.. this needs cleanup
+                    if getattr(iel, 'type', None) is None:
+                        for eel in iel:
+                            _process(eel, inner_json_name)
+                    else:
+                        _process(iel, inner_json_name)
             else:
                 if content_is_choice:
                     if inner_json_name is not None:
