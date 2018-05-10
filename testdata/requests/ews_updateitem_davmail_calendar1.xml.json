@@ -158,12 +158,12 @@
                     "Recurrence": {
                         "__type": "Recurrence:#Exchange",
                         "WeeklyRecurrence": {
-                            "__type": "WeeklyRecurrencePattern:#Exchange",
+                            "__type": "WeeklyRecurrence:#Exchange",
                             "Interval": 1,
                             "DaysOfWeek": "Tuesday"
                         },
                         "NoEndRecurrence": {
-                            "__type": "NoEndRecurrenceRange:#Exchange",
+                            "__type": "NoEndRecurrence:#Exchange",
                             "StartDate": "2018-03-27"
                         }
                     }

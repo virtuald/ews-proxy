@@ -374,7 +374,21 @@ def apply_hacks(operations, types, elements):
     types[t + "PhoneNumberDictionaryEntryType"].json_text_attr = 'PhoneNumber'
 
     types[t + "PhysicalAddressDictionaryType"].json_name = 'PhysicalAddressDictionaryType'
-
+    
+    # Recurrence types
+    types[t + "RelativeYearlyRecurrencePatternType"].json_name = 'RelativeYearlyRecurrence'
+    types[t + "AbsoluteYearlyRecurrencePatternType"].json_name = 'AbsoluteYearlyRecurrence'
+    types[t + "RelativeMonthlyRecurrencePatternType"].json_name = 'RelativeMonthlyRecurrence'
+    types[t + "AbsoluteMonthlyRecurrencePatternType"].json_name = 'AbsoluteMonthlyRecurrence'
+    types[t + "WeeklyRecurrencePatternType"].json_name = 'WeeklyRecurrence'
+    types[t + "DailyRecurrencePatternType"].json_name = 'DailyRecurrence'
+    types[t + "DailyRegeneratingPatternType"].json_name = 'DailyRegeneration'
+    types[t + "WeeklyRegeneratingPatternType"].json_name = 'WeeklyRegeneration'
+    types[t + "MonthlyRegeneratingPatternType"].json_name = 'YearlyRegeneration'
+    types[t + "NoEndRecurrenceRangeType"].json_name = 'NoEndRecurrence'
+    types[t + "EndDateRecurrenceRangeType"].json_name = 'EndDateRecurrence'
+    types[t + "NumberedRecurrenceRangeType"].json_name = 'NumberedRecurrence'
+    
     types[t + "ReminderMessageDataType"].json_name = "ReminderMessageDataType"
     types[t + "RequestAttachmentIdType"].json_name = "AttachmentId"
 
