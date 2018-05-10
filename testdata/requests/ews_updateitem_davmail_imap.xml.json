@@ -8,7 +8,7 @@
         "__type": "UpdateItemRequest:#Exchange",
         "MessageDisposition": "SaveOnly",
         "ConflictResolution": "AlwaysOverwrite",
-        "SendMeetingInvitationsOrCancellations": "SendToNone",
+        "SendCalendarInvitationsOrCancellations": "SendToNone",
         "ItemChanges": [{
             "__type": "ItemChange:#Exchange",
             "ItemId": {

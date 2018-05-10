@@ -15,7 +15,7 @@
         "__type": "UpdateItemRequest:#Exchange",
         "MessageDisposition": "SendAndSaveCopy",
         "ConflictResolution": "AutoResolve",
-        "SendMeetingInvitationsOrCancellations": "SendToAllAndSaveCopy",
+        "SendCalendarInvitationsOrCancellations": "SendToAllAndSaveCopy",
         "ItemChanges": [{
             "__type": "ItemChange:#Exchange",
             "ItemId": {

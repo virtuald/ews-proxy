@@ -293,6 +293,9 @@ def apply_hacks(operations, types, elements):
         'OldestReceivedTime', 'MoreItemsOnServer', 'TotalCount'
     ]
     
+    a = types[m + "UpdateItemType"].attrs
+    a['SendMeetingInvitationsOrCancellations'].json_name = 'SendCalendarInvitationsOrCancellations'
+    
     #
     # Types namespace
     #
@@ -448,7 +451,7 @@ def apply_hacks(operations, types, elements):
     types[t + "SyncFolderItemsReadFlagType"].json_extra = [
         'ChangeType'
     ]
-
+    
     types[t + "TimeZoneDefinitionType"].json_name = 'TimeZoneDefinitionType'
     types[t + 'UserConfigurationNameType'].json_name = 'UserConfigurationNameType'
     types[t + "VotingInformationType"].json_name = 'VotingInformationType'
@@ -912,6 +915,8 @@ def generate_golang(elements, types, operations, fp):
                 t = ''
                 if v:
                     t = ', T: "%s"' % v.name
+                    if v.json_name:
+                        t += ', JN: "%s"' % v.json_name
 
                 aa.append('{XN: "%s"%s},' % (n, t))
 
