@@ -1,0 +1,17 @@
+sudo: false
+language: go
+
+go:
+- "1.10.x"
+
+python:
+- "2.7"
+
+install:
+- pip install --user -r codegen/requirements.txt
+- go generate
+- go get -t ./...
+
+script:
+# TODO: validate the xml input files, but they currently fail validation
+- go test -v ./...
