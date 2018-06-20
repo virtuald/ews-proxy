@@ -21,6 +21,7 @@ func CreateNewResponse(request *http.Request, content string) *http.Response {
 	response.Proto = request.Proto
 	response.ProtoMajor = request.ProtoMajor
 	response.ProtoMinor = request.ProtoMinor
+	response.StatusCode = http.StatusOK
 	return response
 }
 
