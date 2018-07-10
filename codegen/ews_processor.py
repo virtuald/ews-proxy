@@ -293,6 +293,9 @@ def apply_hacks(operations, types, elements):
         'OldestReceivedTime', 'MoreItemsOnServer', 'TotalCount'
     ]
     
+    a = types[m + "UpdateItemType"].attrs
+    a['SendMeetingInvitationsOrCancellations'].json_name = 'SendCalendarInvitationsOrCancellations'
+    
     #
     # Types namespace
     #
@@ -332,7 +335,7 @@ def apply_hacks(operations, types, elements):
     
     # TODO we should automatically handle when processing the schema
     types[t + "DaysOfWeekType"].simple_type = "list"
-    types[t + "DaysOfWeekType"].list_item_type = 'DayOfWeekType'        
+    types[t + "DaysOfWeekType"].list_item_type = 'DayOfWeekType'
 
     types[t + "EmailAddressType"].json_extra = [
         'EmailAddressIndex', 'RelevanceScore', 'SipUri', 'Submitted',
@@ -374,7 +377,21 @@ def apply_hacks(operations, types, elements):
     types[t + "PhoneNumberDictionaryEntryType"].json_text_attr = 'PhoneNumber'
 
     types[t + "PhysicalAddressDictionaryType"].json_name = 'PhysicalAddressDictionaryType'
-
+    
+    # Recurrence types
+    types[t + "RelativeYearlyRecurrencePatternType"].json_name = 'RelativeYearlyRecurrence'
+    types[t + "AbsoluteYearlyRecurrencePatternType"].json_name = 'AbsoluteYearlyRecurrence'
+    types[t + "RelativeMonthlyRecurrencePatternType"].json_name = 'RelativeMonthlyRecurrence'
+    types[t + "AbsoluteMonthlyRecurrencePatternType"].json_name = 'AbsoluteMonthlyRecurrence'
+    types[t + "WeeklyRecurrencePatternType"].json_name = 'WeeklyRecurrence'
+    types[t + "DailyRecurrencePatternType"].json_name = 'DailyRecurrence'
+    types[t + "DailyRegeneratingPatternType"].json_name = 'DailyRegeneration'
+    types[t + "WeeklyRegeneratingPatternType"].json_name = 'WeeklyRegeneration'
+    types[t + "MonthlyRegeneratingPatternType"].json_name = 'YearlyRegeneration'
+    types[t + "NoEndRecurrenceRangeType"].json_name = 'NoEndRecurrence'
+    types[t + "EndDateRecurrenceRangeType"].json_name = 'EndDateRecurrence'
+    types[t + "NumberedRecurrenceRangeType"].json_name = 'NumberedRecurrence'
+    
     types[t + "ReminderMessageDataType"].json_name = "ReminderMessageDataType"
     types[t + "RequestAttachmentIdType"].json_name = "AttachmentId"
 
@@ -434,7 +451,7 @@ def apply_hacks(operations, types, elements):
     types[t + "SyncFolderItemsReadFlagType"].json_extra = [
         'ChangeType'
     ]
-
+    
     types[t + "TimeZoneDefinitionType"].json_name = 'TimeZoneDefinitionType'
     types[t + 'UserConfigurationNameType'].json_name = 'UserConfigurationNameType'
     types[t + "VotingInformationType"].json_name = 'VotingInformationType'
@@ -452,7 +469,10 @@ def process_element(e, elements, types, cls_hierarchy):
     ename = e.name
     data = process_type(typ, types, ename, cls_hierarchy)
     if ename in elements:
-        raise Exception("Internal error: duplicate element name")
+        #raise Exception("Internal error: duplicate element name %s" % ename)
+        # TODO: this occurs because of bugs in xmlschema, and upgrading is a pain
+        print("Warning: duplicate element name", ename)
+        return None, None
 
     if data:
         edata = ElementData(data)
@@ -523,7 +543,6 @@ def process_type(typ, types, parent_name, cls_hierarchy):
         if hasattr(typ, 'elem'):
             restriction = typ.elem
             data.enum_values = []
-            index = 0
             for child in restriction.getchildren():
                     ns, tagname = split_qname(child.tag)
                     if tagname == 'enumeration':
@@ -641,7 +660,6 @@ def process_type(typ, types, parent_name, cls_hierarchy):
         outer_json_name = None
         inner_json_name = None
         json_idx = 0
-
         # recurse to any underlying elements
         for el in content_elements:
             if isinstance(el, XsdGroup):
@@ -653,7 +671,12 @@ def process_type(typ, types, parent_name, cls_hierarchy):
                         json_idx += 1
 
                 for iel in el:
-                    _process(iel, inner_json_name)
+                    # TODO: too many special cases.. this needs cleanup
+                    if getattr(iel, 'type', None) is None:
+                        for eel in iel:
+                            _process(eel, inner_json_name)
+                    else:
+                        _process(iel, inner_json_name)
             else:
                 if content_is_choice:
                     if inner_json_name is not None:
@@ -892,6 +915,8 @@ def generate_golang(elements, types, operations, fp):
                 t = ''
                 if v:
                     t = ', T: "%s"' % v.name
+                    if v.json_name:
+                        t += ', JN: "%s"' % v.json_name
 
                 aa.append('{XN: "%s"%s},' % (n, t))
 

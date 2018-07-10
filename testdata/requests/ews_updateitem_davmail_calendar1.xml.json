@@ -1,0 +1,235 @@
+{
+    "__type": "UpdateItemJsonRequest:#Exchange",
+    "Header": {
+        "__type": "JsonRequestHeaders:#Exchange",
+        "RequestServerVersion": "Exchange2013_SP1",
+        "TimeZoneContext": {
+            "__type": "TimeZoneContext:#Exchange",
+            "TimeZoneDefinition": {
+                "__type": "TimeZoneDefinitionType:#Exchange",
+                "Id": "Central Standard Time"
+            }
+        }
+    },
+    "Body": {
+        "__type": "UpdateItemRequest:#Exchange",
+        "MessageDisposition": "SendAndSaveCopy",
+        "ConflictResolution": "AutoResolve",
+        "SendCalendarInvitationsOrCancellations": "SendToAllAndSaveCopy",
+        "ItemChanges": [{
+            "__type": "ItemChange:#Exchange",
+            "ItemId": {
+                "__type": "ItemId:#Exchange",
+                "Id": "someitemid=",
+                "ChangeKey": "thechangekey"
+            },
+            "Updates": [{
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:Start"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "Start": "2018-03-27T08:00:00"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:End"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "End": "2018-03-27T09:00:00"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:StartTimeZone"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "StartTimeZone": {
+                        "__type": "TimeZoneDefinitionType:#Exchange",
+                        "Id": "Central Standard Time"
+                    }
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:EndTimeZone"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "EndTimeZone": {
+                        "__type": "TimeZoneDefinitionType:#Exchange",
+                        "Id": "Central Standard Time"
+                    }
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:LegacyFreeBusyStatus"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "FreeBusyType": "Busy"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:IsAllDayEvent"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "IsAllDayEvent": false
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "item:Sensitivity"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "Sensitivity": "Normal"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x1000",
+                    "PropertyType": "String"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "ExtendedProperty": [{
+                        "__type": "ExtendedPropertyType:#Exchange",
+                        "ExtendedFieldURI": {
+                            "__type": "ExtendedPropertyUri:#Exchange",
+                            "PropertyTag": "0x1000",
+                            "PropertyType": "String"
+                        },
+                        "Value": "Created inside OWA Updated in Outlook on 4/3"
+                    }]
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "PropertyTag": "0x37",
+                    "PropertyType": "String"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "ExtendedProperty": [{
+                        "__type": "ExtendedPropertyType:#Exchange",
+                        "ExtendedFieldURI": {
+                            "__type": "ExtendedPropertyUri:#Exchange",
+                            "PropertyTag": "0x37",
+                            "PropertyType": "String"
+                        },
+                        "Value": "Some Meeting"
+                    }]
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:Location"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "Location": "Skype"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:Recurrence"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "Recurrence": {
+                        "__type": "Recurrence:#Exchange",
+                        "WeeklyRecurrence": {
+                            "__type": "WeeklyRecurrence:#Exchange",
+                            "Interval": 1,
+                            "DaysOfWeek": "Tuesday"
+                        },
+                        "NoEndRecurrence": {
+                            "__type": "NoEndRecurrence:#Exchange",
+                            "StartDate": "2018-03-27"
+                        }
+                    }
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:RequiredAttendees"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "RequiredAttendees": null
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "calendar:OptionalAttendees"
+                },
+                "Item": {
+                    "__type": "CalendarItem:#Exchange",
+                    "OptionalAttendees": null
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "item:ReminderIsSet"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "ReminderIsSet": true
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "PropertyUri:#Exchange",
+                    "FieldURI": "item:ReminderMinutesBeforeStart"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "ReminderMinutesBeforeStart": "5"
+                }
+            }, {
+                "__type": "SetItemField:#Exchange",
+                "Path": {
+                    "__type": "ExtendedPropertyUri:#Exchange",
+                    "DistinguishedPropertySetId": "PublicStrings",
+                    "PropertyName": "xmozlastack",
+                    "PropertyType": "String"
+                },
+                "Item": {
+                    "__type": "Item:#Exchange",
+                    "ExtendedProperty": [{
+                        "__type": "ExtendedPropertyType:#Exchange",
+                        "ExtendedFieldURI": {
+                            "__type": "ExtendedPropertyUri:#Exchange",
+                            "DistinguishedPropertySetId": "PublicStrings",
+                            "PropertyName": "xmozlastack",
+                            "PropertyType": "String"
+                        },
+                        "Value": "20180424T141956Z"
+                    }]
+                }
+            }]
+        }]
+    }
+}

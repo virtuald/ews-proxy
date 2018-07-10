@@ -134,7 +134,7 @@ func initRetObject(el xml.StartElement, typ *EwsType, simple bool) (obj *Ordered
 			for _, attr := range el.Attr {
 				if attr.Name.Space != "xmlns" && attr.Name.Local != "xmlns" {
 					if atype, ok := typ.Attrs[attr.Name.Local]; ok {
-						obj.Set(attr.Name.Local, convertSimpleToJson(atype, attr.Value))
+						obj.Set(typ.AttrsNames[attr.Name.Local], convertSimpleToJson(atype, attr.Value))
 					} else {
 						err = errors.Errorf("Unknown attribute %s for type %s?", attr.Name.Local, typ.Name)
 						return

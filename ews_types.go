@@ -85,6 +85,8 @@ type EwsType struct {
 
 	// XML attributes, key is XmlName
 	Attrs map[string]*EwsType
+	// key is XmlName, value is JsonName
+	AttrsNames map[string]string
 
 	AnyAttr    bool
 	IsSimple   bool
@@ -119,13 +121,16 @@ func (v *EwsType) Initialize() {
 
 	// create Attrs
 	v.Attrs = make(map[string]*EwsType)
+	v.AttrsNames = make(map[string]string)
 
 	for i, a := range v.Attributes {
 		t := ewsTypes[a.T]
 		v.Attrs[a.XN] = t
 		if a.JN == "" {
 			v.Attributes[i].JN = a.XN
+			a.JN = a.XN
 		}
+		v.AttrsNames[a.XN] = a.JN
 	}
 
 	v.TypeByElementName = make(map[string]*EwsXmlElement)
