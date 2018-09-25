@@ -6,8 +6,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
-	"strings"
 	"strconv"
+	"strings"
+	"sync"
 	"time"
 
 	"github.com/virtuald/ews-proxy/proxyutils"
@@ -32,9 +33,13 @@ type TranslationMiddleware struct {
 	OwaCanary string
 
 	// function pointers controlling various aspects of the transport
-	OnEwsSuccess          func()
-	OnEwsTimeout          func()
+	OnEwsLogin            func() // called whenever a login occurs. probably.
+	OnEwsSuccess          func() // called whenever a successful EWS transaction occurs
+	OnEwsTimeout          func() // called whenever an EWS timeout is detected
 	OnEwsTranslationError func(transactionLog *bytes.Buffer)
+
+	lock     sync.Mutex
+	loggedIn bool
 }
 
 // Creates an TranslationMiddleware object with lots of defaults filled in
@@ -44,6 +49,7 @@ func NewTranslationMiddleware() *TranslationMiddleware {
 		EwsPath:        "/ews/exchange.asmx",
 		OwaServicePath: "/owa/service.svc",
 
+		OnEwsLogin:            func() {},
 		OnEwsSuccess:          func() {},
 		OnEwsTimeout:          func() {},
 		OnEwsTranslationError: func(*bytes.Buffer) {},
@@ -146,7 +152,7 @@ func (this *TranslationMiddleware) ResponseModifier(response *http.Response, cct
 	ctx := cctx["ews_ctx"].(*ewsProxyContext)
 
 	if response.StatusCode == 440 { // MS LoginTimeout
-		this.OnEwsTimeout()
+		this.onTimeout()
 
 	} else if response.StatusCode != http.StatusFound &&
 		response.StatusCode != http.StatusGatewayTimeout {
@@ -184,7 +190,7 @@ func (this *TranslationMiddleware) ResponseModifier(response *http.Response, cct
 			response.ContentLength = int64(outbuf.Len())
 
 			if response.StatusCode == http.StatusOK {
-				this.OnEwsSuccess()
+				this.onSuccess()
 			}
 		}
 	}
@@ -215,4 +221,28 @@ func (this *TranslationMiddleware) appendTransaction(cxt *ewsProxyContext, conte
 
 	cxt.TransactionLog.WriteString(content)
 	cxt.TransactionLog.WriteRune('\n')
+}
+
+func (this *TranslationMiddleware) onSuccess() {
+	loginEvent := false
+	this.lock.Lock()
+	if this.loggedIn == false {
+		this.loggedIn = true
+		loginEvent = true
+	}
+	this.lock.Unlock()
+
+	if loginEvent {
+		this.OnEwsLogin()
+	}
+
+	this.OnEwsSuccess()
+}
+
+func (this *TranslationMiddleware) onTimeout() {
+	this.lock.Lock()
+	this.loggedIn = false
+	this.lock.Unlock()
+
+	this.OnEwsTimeout()
 }

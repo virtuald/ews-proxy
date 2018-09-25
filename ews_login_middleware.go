@@ -15,7 +15,7 @@ import (
 type LoginMiddleware struct {
 	Translator *TranslationMiddleware
 	Redirector *proxyutils.RedirectorMiddleware
-	
+
 	// string contains on path; typically /owa/
 	CheckPath string
 
@@ -25,7 +25,7 @@ type LoginMiddleware struct {
 	// disabled if 0
 	KeepAlivePeriod time.Duration
 	keepAliveTicker *time.Ticker
-	
+
 	CanaryFinder func(*http.Response) (string, error)
 }
 
@@ -35,7 +35,7 @@ func (this *LoginMiddleware) RequestModifier(request *http.Request, cctx proxyut
 		response := proxyutils.CreateNewResponse(request, closePageHtml)
 		return proxyutils.NewRequestError(response)
 	}
-	
+
 	// store this in the context because other people modify it
 	cctx["login_ctx"] = request.URL.Path
 	return nil
@@ -56,15 +56,15 @@ func (this *LoginMiddleware) ResponseModifier(response *http.Response, cctx prox
 			if this.Redirector.UserAgent == "" {
 				this.Redirector.UserAgent = response.Header.Get("User-Agent")
 			}
-			
+
 			// validate and set the canary if it's valid
 			this.CheckLogin(canary)
 		}
-		
+
 		// If we have a canary stored, _always_ tell the user's page to close, otherwise
 		// eventually they'll make it to the OWA page
 		if this.Translator.OwaCanary != "" {
-			this.Translator.OnEwsSuccess()
+			this.Translator.onSuccess()
 
 			response.Body = ioutil.NopCloser(strings.NewReader(""))
 			response.ContentLength = 0
@@ -84,7 +84,7 @@ func (this *LoginMiddleware) CookieCanaryFinder(response *http.Response) (string
 			return cookie.Value, nil
 		}
 	}
-	
+
 	return "", nil
 }
 
@@ -164,7 +164,7 @@ func (this *LoginMiddleware) OwaKeepalive() {
 		if !this.CheckLogin(this.Translator.OwaCanary) {
 			// only set the status if the canary is unset
 			if this.Translator.OwaCanary == "" {
-				this.Translator.OnEwsTimeout()
+				this.Translator.onTimeout()
 			}
 		}
 	}
