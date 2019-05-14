@@ -36,7 +36,7 @@ func NewRequestError(response *http.Response) error {
 
 type chainedProxy struct {
 	Name string
-	
+
 	LogTrace *log.Logger
 	LogDebug *log.Logger
 	LogInfo *log.Logger
@@ -50,14 +50,14 @@ type chainedProxy struct {
 }
 
 // returns a http.RoundTripper that calls each middleware in order
-func CreateChainedProxy(name string, 
+func CreateChainedProxy(name string,
 	logTrace *log.Logger,
 	logDebug *log.Logger,
 	logInfo *log.Logger,
 	logWarn *log.Logger,
 	logError *log.Logger,
 	Transport http.RoundTripper, middlewares ...Middleware) http.RoundTripper {
-		 
+
 	if Transport == nil {
 		Transport = http.DefaultTransport
 	}
@@ -88,6 +88,7 @@ func CreateChainedProxy(name string,
 func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, error) {
 
 	this.LogInfo.Println(this.Name, request.Method, request.URL.Path)
+	this.LogTrace.Println(this.Name, request.Method, request.URL.Path, request.Header, request.RequestURI)
 
 	var response *http.Response
 	var err error
@@ -110,7 +111,9 @@ func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, erro
 			}
 		}
 	}
-	
+
+	this.LogTrace.Println(this.Name, "Request after modifications", request.Method, request.URL.Path, request.Header, request.RequestURI)
+
 	// try each connection up to 3 times
   retryCount := 3
   for retryCount > 0 {
@@ -125,7 +128,7 @@ func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, erro
     }
     retryCount -= 1;
   }
-	
+
 	if err != nil {
 		// this is always some sort of network error, but let's choose to return a
 		// valid response to the client telling them what happened...
@@ -133,7 +136,9 @@ func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, erro
 		response.StatusCode = http.StatusGatewayTimeout
 		return response, nil
 	}
-	
+
+	this.LogTrace.Println(this.Name, "Original response", response.StatusCode, response.Header)
+
 	// anybody want to modify the response?
 	for _, modifier := range this.ResponseModifiers {
 		err = modifier(response, ctx)
@@ -141,6 +146,8 @@ func (this *chainedProxy) RoundTrip(request *http.Request) (*http.Response, erro
 			return nil, err
 		}
 	}
+
+	this.LogTrace.Println(this.Name, "Modified response", response.StatusCode, response.Header)
 
 	return response, err
 }
