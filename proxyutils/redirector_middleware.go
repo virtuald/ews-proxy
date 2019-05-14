@@ -60,6 +60,7 @@ func (this *RedirectorMiddleware) RequestModifier(request *http.Request, ctx Cha
 	// Fix various headers that may contain a URL
 	this.RetargetMap.Retarget(&request.Header, "Origin", this.TargetServer)
 	this.RetargetMap.Retarget(&request.Header, "Referer", this.TargetServer)
+	request.Header.Set("Host", this.TargetServer.Host)
 
 	// retarget the request itself
 	ctx["maskcxt_host"] = request.Host
